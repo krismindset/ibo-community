@@ -681,3 +681,13 @@ section { position: relative; z-index: 1; }
   .footer-brand-name { font-size: 1.1rem; }
   .footer-legal { flex-direction: column; gap: 0.4rem !important; align-items: center; }
 }
+
+@media (max-width: 768px) {
+  .custom-nav .nav-link {
+    white-space: normal;  /* permette il testo a capo */
+    text-align: center;
+    line-height: 1.2;
+    font-size: 0.72rem;
+  }
+  .nav-links { gap: 0.8rem; align-items: flex-start; }
+}
