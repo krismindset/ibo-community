@@ -136,7 +136,6 @@ section { position: relative; z-index: 1; }
   object-fit: contain;
 }
 
-/* Tutti i link bianchi — incluso Contattaci, nessuno sfondo */
 .custom-nav .nav-link {
   font-size: 0.88rem;
   font-weight: 500;
@@ -148,7 +147,6 @@ section { position: relative; z-index: 1; }
   transition: opacity 0.2s;
 }
 
-/* Sottolineatura glow all'hover */
 .custom-nav .nav-link::after {
   content: '';
   position: absolute;
@@ -164,13 +162,11 @@ section { position: relative; z-index: 1; }
 .custom-nav .nav-link:hover { opacity: 0.85; }
 .custom-nav .nav-link:hover::after { width: 100%; }
 
-/* Contattaci — stesso stile degli altri link, NESSUNO sfondo blu */
 .nav-cta {
   color: #ffffff !important;
   font-weight: 600 !important;
 }
 
-/* Social icons navbar */
 .nav-social {
   width: 34px;
   height: 34px;
@@ -195,6 +191,8 @@ section { position: relative; z-index: 1; }
 
 /* ─────────────────────────────────────────
    6. INTRO — Immagine copertina
+   object-fit: contain → foto intera senza tagli
+   background: navy → riempie i bordi vuoti
 ───────────────────────────────────────── */
 #intro {
   position: relative;
@@ -204,12 +202,13 @@ section { position: relative; z-index: 1; }
   overflow: hidden;
   padding-top: 72px;
   box-sizing: border-box;
+  background: #04081a;
 }
 
 .intro-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;     /* mostra tutta la foto senza tagliarla */
   object-position: center;
   display: block;
 }
