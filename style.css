@@ -1130,3 +1130,306 @@ section { position: relative; z-index: 1; }
 
   .join-form .custom-input { min-width: 0; }
 }
+
+/* ══════════════════════════════════════════
+   MEDIA QUERIES COMPLETE — Tutti i dispositivi
+   
+   320px  → telefoni piccoli (iPhone SE, Galaxy A)
+   375px  → telefoni medi (iPhone 12/13/14)
+   480px  → telefoni grandi / landscape piccoli
+   576px  → Bootstrap SM
+   768px  → tablet portrait / Bootstrap MD
+   992px  → tablet landscape / Bootstrap LG
+   1200px → desktop piccolo / Bootstrap XL
+   1400px → desktop grande / Bootstrap XXL
+══════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────
+   📱 320px — Telefoni molto piccoli
+   iPhone SE, Galaxy A12, telefoni entry level
+───────────────────────────────────────── */
+@media (max-width: 320px) {
+
+  /* Navbar */
+  .nav-logo-img        { height: 28px; }
+  .custom-nav .nav-link { font-size: 0.62rem; letter-spacing: 0; }
+  .navbar-nav           { gap: 0.5rem !important; }
+  .nav-social           { width: 26px; height: 26px; font-size: 0.7rem; }
+
+  /* Intro */
+  #intro { height: 45vh; padding-top: 60px; }
+
+  /* Hero */
+  #hero { padding: 5rem 1rem 4rem; }
+  .hero-badge { font-size: 0.65rem; padding: 0.4rem 0.9rem; }
+  .hero-sub   { font-size: 0.88rem; }
+  .btn-hero   { padding: 0.7rem 1.4rem; font-size: 0.82rem; }
+  .stat-num   { font-size: 1.8rem; }
+  .stat-label { font-size: 0.65rem; }
+  .hero-stats { gap: 1.5rem !important; }
+
+  /* Sections */
+  .section-inner  { padding: 4rem 1rem; }
+  .section-title  { font-size: 1.6rem; }
+
+  /* Chi siamo */
+  .about-photo-main .about-photo { height: 220px; }
+  .benefit-card { padding: 1rem; }
+  .stat-card-num { font-size: 2rem; }
+
+  /* Servizi */
+  .service-circle { width: 80px; height: 80px; }
+  .service-title  { font-size: 0.82rem; }
+  .service-desc   { font-size: 0.72rem; }
+
+  /* Galleria */
+  .gallery-slide { height: 200px; }
+  .gallery-arrow { width: 32px; height: 32px; }
+  .gallery-slide-label { font-size: 0.75rem; padding: 0.3rem 0.7rem; }
+
+  /* Testimonianze */
+  .testi-photo-wrap { height: 160px; }
+  .testi-name { font-size: 0.9rem; }
+
+  /* Unisciti */
+  .step { padding: 1.2rem; }
+  .step-num { font-size: 1.6rem; }
+  .join-form { flex-direction: column; }
+  .join-form .custom-input { min-width: 0; }
+
+  /* Contatti */
+  .contact-form-box { padding: 1rem; }
+  .contact-icon { width: 36px; height: 36px; font-size: 0.9rem; }
+
+  /* Footer */
+  .footer-brand-name { font-size: 1.1rem; }
+  .footer-legal { flex-direction: column; gap: 0.5rem !important; }
+}
+
+
+/* ─────────────────────────────────────────
+   📱 375px — Telefoni medi standard
+   iPhone 12, 13, 14, Samsung Galaxy S
+───────────────────────────────────────── */
+@media (max-width: 375px) {
+
+  /* Navbar */
+  .nav-logo-img         { height: 32px; }
+  .custom-nav .nav-link { font-size: 0.68rem; letter-spacing: 0; }
+  .navbar-nav           { gap: 0.6rem !important; }
+  .nav-social           { width: 28px; height: 28px; font-size: 0.75rem; }
+
+  /* Intro */
+  #intro { height: 48vh; padding-top: 64px; }
+
+  /* Hero */
+  #hero { padding: 5.5rem 1.2rem 4rem; }
+  .hero-badge { font-size: 0.7rem; padding: 0.42rem 1rem; }
+  .hero-sub   { font-size: 0.92rem; }
+  .btn-hero   { padding: 0.75rem 1.6rem; font-size: 0.86rem; }
+  .stat-num   { font-size: 2rem; }
+  .hero-stats { gap: 2rem !important; }
+
+  /* Sections */
+  .section-inner { padding: 4rem 1.1rem; }
+  .section-title { font-size: 1.75rem; }
+
+  /* Chi siamo */
+  .about-photo-main .about-photo { height: 240px; }
+
+  /* Servizi */
+  .service-circle { width: 90px; height: 90px; }
+
+  /* Galleria */
+  .gallery-slide { height: 220px; }
+
+  /* Testimonianze */
+  .testi-photo-wrap { height: 180px; }
+
+  /* Footer */
+  .footer-brand-name { font-size: 1.2rem; }
+}
+
+
+/* ─────────────────────────────────────────
+   📱 480px — Telefoni grandi / landscape
+   iPhone Plus, Galaxy Ultra, landscape piccoli
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* Intro */
+  #intro { height: 50vh; }
+
+  /* Hero */
+  .hero-stats { gap: 2.5rem !important; }
+
+  /* Sections */
+  .section-title { font-size: 1.9rem; }
+
+  /* Servizi */
+  .service-circle { width: 100px; height: 100px; }
+
+  /* Galleria */
+  .gallery-slide { height: 260px; }
+  .gallery-indicators { bottom: 2.5rem !important; }
+
+  /* Unisciti */
+  .join-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .join-form .custom-input { min-width: 0; }
+
+  /* Contatti */
+  .contact-form-box { padding: 1.2rem; }
+}
+
+
+/* ─────────────────────────────────────────
+   📱 576px — Bootstrap SM
+   Tablet piccoli portrait, telefoni landscape
+───────────────────────────────────────── */
+@media (max-width: 576px) {
+
+  /* Navbar */
+  .custom-nav .nav-link { font-size: 0.76rem; }
+
+  /* Hero */
+  #hero { padding: 6rem 1.5rem 4.5rem; }
+  .hero-sub { font-size: 0.97rem; }
+
+  /* Chi siamo */
+  .about-photo-main .about-photo { height: 260px; }
+  .stat-card { padding: 1.5rem 0.8rem; }
+  .stat-card-num { font-size: 2.4rem; }
+
+  /* Galleria */
+  .gallery-slide { height: 280px; }
+  .gallery-counter { top: 0.8rem; right: 0.8rem; font-size: 0.72rem; }
+
+  /* Alert box */
+  .alert-box { flex-direction: column; gap: 0.8rem; padding: 1.5rem; }
+
+  /* Footer */
+  .site-footer .container-xl { padding: 0 1.2rem; }
+  .footer-copy,
+  .footer-legal {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   📟 768px — Tablet portrait / Bootstrap MD
+   iPad, Galaxy Tab portrait
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Intro */
+  #intro { height: 60vh; }
+
+  /* Hero */
+  .orb-1 { width: 280px; height: 280px; }
+  .orb-2 { width: 220px; height: 220px; }
+
+  /* Sections */
+  .section-inner { padding: 5rem 1.2rem; }
+
+  /* Servizi */
+  .service-circle { width: 120px; height: 120px; }
+
+  /* Galleria */
+  .gallery-slide      { height: 340px; }
+  .gallery-arrow      { width: 38px; height: 38px; }
+  .gallery-arrow i    { font-size: 0.85rem; }
+  .gallery-indicators { bottom: 3rem !important; }
+
+  /* Chi siamo */
+  .about-photo-main .about-photo { height: 300px; }
+
+  /* Contatti */
+  .contact-form-box { padding: 1.5rem; }
+
+  /* Footer */
+  .site-footer .container-xl {
+    padding: 0 1.5rem;
+  }
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .footer-copy,
+  .footer-legal {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   💻 992px — Tablet landscape / Bootstrap LG
+   iPad landscape, piccoli laptop
+───────────────────────────────────────── */
+@media (max-width: 992px) {
+
+  /* Hero */
+  .hero-badge { font-size: 0.85rem; }
+  .hero-sub   { font-size: 1rem; max-width: 440px; }
+
+  /* Sections */
+  .section-inner { padding: 6rem 1.5rem; }
+  .section-title { font-size: clamp(1.8rem, 3.5vw, 2.4rem); }
+
+  /* Servizi */
+  .service-circle { width: 130px; height: 130px; }
+
+  /* Galleria */
+  .gallery-slide { height: 420px; }
+
+  /* Chi siamo */
+  .about-photo-main .about-photo { height: 320px; }
+}
+
+
+/* ─────────────────────────────────────────
+   🖥️ 1200px — Desktop piccolo / Bootstrap XL
+───────────────────────────────────────── */
+@media (max-width: 1200px) {
+
+  /* Navbar */
+  .custom-nav .nav-link { font-size: 0.84rem; }
+  .navbar-nav           { gap: 1.8rem !important; }
+
+  /* Hero */
+  .hero-sub { max-width: 480px; }
+
+  /* Galleria */
+  .gallery-slide { height: 480px; }
+}
+
+
+/* ─────────────────────────────────────────
+   🖥️ 1400px — Desktop grande / Bootstrap XXL
+───────────────────────────────────────── */
+@media (min-width: 1400px) {
+
+  /* Hero */
+  .hero-sub { max-width: 580px; font-size: 1.15rem; }
+  .stat-num { font-size: 2.8rem; }
+
+  /* Galleria */
+  .gallery-slide { height: 620px; }
+
+  /* Sections */
+  .section-inner { padding: 8rem 2rem; }
+}
