@@ -24,38 +24,56 @@
 
   <!-- ══════════════════════════════════════
        NAVBAR
+       Desktop: logo + tutti i link + social
+       Mobile:  logo + solo Contattaci + social
   ══════════════════════════════════════ -->
   <nav class="navbar fixed-top custom-nav">
     <div class="container-xl d-flex align-items-center justify-content-between">
 
-      <!-- Logo a sinistra -->
+      <!-- Logo sinistra -->
       <a class="navbar-brand nav-logo" href="#">
-        <img src="foto_hero.png" alt="Logo" class="nav-logo-img" />
+        <img src="foto_hero.png" alt="Logo IBO" class="nav-logo-img" />
       </a>
 
-      <!-- Link di navigazione a destra -->
-      <ul class="navbar-nav flex-row align-items-center gap-4">
+      <!-- Link navigazione — nascosti su mobile, visibili da tablet in su -->
+      <ul class="navbar-nav flex-row align-items-center gap-4 nav-links-desktop">
         <li class="nav-item"><a class="nav-link" href="#chi-siamo">La nostra community</a></li>
         <li class="nav-item"><a class="nav-link" href="#servizi">La tuà opportunità</a></li>
         <li class="nav-item"><a class="nav-link" href="#galleria">Galleria</a></li>
-      
-        <!-- Contattaci — senza sfondo blu, uguale agli altri link -->
         <li class="nav-item"><a class="nav-link nav-cta" href="#unisciti">Contattaci</a></li>
-        <!-- Social -->
-        <li class="nav-item">
-          <a class="nav-social" href="#" aria-label="Facebook">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-social" href="#" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
+       
+        
       </ul>
+
+      <!-- Solo su mobile: Contattaci + social -->
+      <div class="nav-mobile-right d-flex align-items-center gap-3">
+        <a class="nav-link nav-cta-mobile" href="#unisciti">Contattaci</a>
+        <a class="nav-social" href="#" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a class="nav-social" href="#" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
 
     </div>
   </nav>
+
+  <!-- ══════════════════════════════════════
+       WIDGET LINGUA — fisso in basso a destra
+       🇮🇹 Italiano  |  🇵🇭 Filipino
+  ══════════════════════════════════════ -->
+  <div class="lang-widget">
+    <!-- Cambia href con i link alle versioni nella lingua corrispondente -->
+    <a href="#" class="lang-btn lang-active" title="Italiano">
+      <span class="lang-flag">🇮🇹</span>
+      <span class="lang-label">IT</span>
+    </a>
+    <a href="#" class="lang-btn" title="Filipino">
+      <span class="lang-flag">🇵🇭</span>
+      <span class="lang-label">FIL</span>
+    </a>
+  </div>
 
   <!-- ══════════════════════════════════════
        INTRO — Immagine copertina aziendale
@@ -68,22 +86,17 @@
        HERO — Sezione benvenuto
   ══════════════════════════════════════ -->
   <section id="hero">
-
-    <!-- Immagine di sfondo: cambia src con il tuo file -->
     <img src="hero-bg.jpg" alt="Hero Background" class="hero-bg-img" />
     <div class="hero-overlay"></div>
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
 
     <div class="container hero-content text-center">
-
       <div class="hero-badge">Benvenuto nella Community</div>
-
       <p class="hero-sub mx-auto">
         Connettiti, cresci e condividi con persone che condividono la tua stessa passione.
         Insieme costruiamo qualcosa di straordinario.
       </p>
-
       <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
         <a href="#unisciti" class="btn btn-hero">
           <i class="fa-solid fa-rocket me-2"></i>Unisciti ora
@@ -92,7 +105,6 @@
           <i class="fa-solid fa-arrow-down me-2"></i>Scopri di più
         </a>
       </div>
-
       <div class="hero-stats d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="stat">
           <div class="stat-num">1.2K+</div>
@@ -107,19 +119,17 @@
           <div class="stat-label">Valutazione</div>
         </div>
       </div>
-
     </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       CHI SIAMO — Info azienda + benefici
+       CHI SIAMO
   ══════════════════════════════════════ -->
   <section id="chi-siamo">
     <div class="container-xl section-inner">
 
-      <!-- Titolo sezione -->
       <div class="row justify-content-center text-center mb-5 reveal">
         <div class="col-lg-8">
           <span class="section-label">Chi Siamo</span>
@@ -132,10 +142,7 @@
         </div>
       </div>
 
-      <!-- Foto principale + card benefici -->
       <div class="row align-items-center g-5 mb-5">
-
-        <!-- Foto grande sinistra: cambia src con il tuo file -->
         <div class="col-lg-5 reveal">
           <div class="about-photo-wrap about-photo-main">
             <img src="foto-1.jpg" alt="IBO Community" class="about-photo" />
@@ -144,61 +151,85 @@
             </div>
           </div>
         </div>
-
-        <!-- 4 card benefici a destra -->
         <div class="col-lg-7 reveal delay-1">
           <div class="row g-3">
-
             <div class="col-md-6">
               <div class="benefit-card">
-                <!-- icona-1.jpg: sostituisci con la tua foto AI -->
-                <div class="benefit-icon">
-                  <img src="icona-1.jpg" alt="" class="benefit-icon-img" />
-                </div>
+                <div class="benefit-icon"><img src="icona-1.jpg" alt="" class="benefit-icon-img" /></div>
                 <h4>5–8 ore settimanali</h4>
                 <p>Il tuo business gira con il minimo del tuo tempo personale.</p>
               </div>
             </div>
-
             <div class="col-md-6">
               <div class="benefit-card">
-                <!-- icona-2.jpg: sostituisci con la tua foto AI -->
-                <div class="benefit-icon">
-                  <img src="icona-2.jpg" alt="" class="benefit-icon-img" />
-                </div>
+                <div class="benefit-icon"><img src="icona-2.jpg" alt="" class="benefit-icon-img" /></div>
                 <h4>Staff già formato</h4>
                 <p>Selezioniamo e formiamo noi il team per te, da zero.</p>
               </div>
             </div>
-
             <div class="col-md-6">
               <div class="benefit-card">
-                <!-- icona-3.jpg: sostituisci con la tua foto AI -->
-                <div class="benefit-icon">
-                  <img src="icona-3.jpg" alt="" class="benefit-icon-img" />
-                </div>
+                <div class="benefit-icon"><img src="icona-3.jpg" alt="" class="benefit-icon-img" /></div>
                 <h4>Settore in crescita</h4>
                 <p>Le escape room sono tra i business più in espansione al mondo.</p>
               </div>
             </div>
-
             <div class="col-md-6">
               <div class="benefit-card">
-                <!-- icona-4.jpg: sostituisci con la tua foto AI -->
-                <div class="benefit-icon">
-                  <img src="icona-4.jpg" alt="" class="benefit-icon-img" />
-                </div>
+                <div class="benefit-icon"><img src="icona-4.jpg" alt="" class="benefit-icon-img" /></div>
                 <h4>Vita privata intatta</h4>
                 <p>Tempo per te, per la famiglia e per le altre attività.</p>
               </div>
             </div>
-
           </div>
         </div>
       </div>
 
-     
- 
+      <!-- Numeri -->
+      <div class="row g-3 mb-5 reveal">
+        <div class="col-12 text-center mb-3">
+          <span class="section-label">I numeri di Cronos</span>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center">
+            <div class="stat-card-num">19</div>
+            <div class="stat-card-label">Sedi attive in Italia</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center">
+            <div class="stat-card-num">12K+</div>
+            <div class="stat-card-label">Recensioni a 5 stelle</div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="stat-card text-center">
+            <div class="stat-card-num">1</div>
+            <div class="stat-card-label">Posto disponibile a Roma</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alert CTA -->
+      <div class="row justify-content-center reveal">
+        <div class="col-lg-8">
+          <div class="alert-box">
+            <div class="alert-box-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+            <div>
+              <h4>Attenzione: non è per tutti.</h4>
+              <p>È per chi vuole un business <strong>serio</strong> e ha un minimo budget per l'investimento iniziale. Se cerchi solo un modo per "diventare ricco dal divano", passa oltre.</p>
+              <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
+                <a href="#unisciti" class="btn btn-hero">
+                  <i class="fa-solid fa-arrow-right me-2"></i>Scopri come funziona
+                </a>
+                <span class="alert-spot">
+                  <i class="fa-solid fa-location-dot me-1"></i> Solo 1 posto per Roma
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </section>
@@ -206,76 +237,45 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       I NOSTRI SERVIZI — Cerchi con foto AI
+       I NOSTRI SERVIZI
   ══════════════════════════════════════ -->
   <section id="servizi" class="bg-deep">
     <div class="container-xl section-inner">
 
-      <!-- Titolo -->
       <div class="row justify-content-center text-center mb-5 reveal">
         <div class="col-lg-7">
           <span class="section-label">I Nostri Servizi</span>
           <h2 class="section-title">Tutto ciò di cui hai bisogno<br/><span style="color:var(--glow)">per iniziare.</span></h2>
-          <p class="text-muted-custom">
-            Mettiamo a disposizione degli affiliati strumenti, supporto e risorse
-            per avviare e far crescere la tua attività senza stress.
-          </p>
+          <p class="text-muted-custom">Mettiamo a disposizione degli affiliati strumenti, supporto e risorse per avviare e far crescere la tua attività senza stress.</p>
         </div>
       </div>
 
-      <!-- Fila 1: 3 cerchi -->
       <div class="row justify-content-center g-4 mb-4 reveal">
         <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle">
-              <!-- serv-1.jpg: sostituisci con la tua foto AI -->
-              <img src="serv-1.jpg" alt="Sito Personalizzato" class="service-circle-img" />
-            </div>
-          </div>
+          <div class="service-circle-wrap"><div class="service-circle"><img src="serv-1.jpg" alt="Sito Personalizzato" class="service-circle-img" /></div></div>
           <h5 class="service-title">Sito Personalizzato</h5>
           <p class="service-desc">Una pagina dedicata alla tua attività, pronta all'uso.</p>
         </div>
         <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle">
-              <!-- serv-2.jpg: sostituisci con la tua foto AI -->
-              <img src="serv-2.jpg" alt="Supporto Clienti" class="service-circle-img" />
-            </div>
-          </div>
+          <div class="service-circle-wrap"><div class="service-circle"><img src="serv-2.jpg" alt="Supporto Clienti" class="service-circle-img" /></div></div>
           <h5 class="service-title">Supporto Clienti</h5>
           <p class="service-desc">Assistenza completa per te e i tuoi clienti, sempre.</p>
         </div>
         <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle">
-              <!-- serv-3.jpg: sostituisci con la tua foto AI -->
-              <img src="serv-3.jpg" alt="Marketing Tools" class="service-circle-img" />
-            </div>
-          </div>
+          <div class="service-circle-wrap"><div class="service-circle"><img src="serv-3.jpg" alt="Marketing Tools" class="service-circle-img" /></div></div>
           <h5 class="service-title">Marketing Tools</h5>
           <p class="service-desc">Strumenti pronti per promuovere la tua escape room.</p>
         </div>
       </div>
 
-      <!-- Fila 2: 2 cerchi centrati -->
       <div class="row justify-content-center g-4 reveal delay-1">
         <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle">
-              <!-- serv-4.jpg: sostituisci con la tua foto AI -->
-              <img src="serv-4.jpg" alt="IBO Community" class="service-circle-img" />
-            </div>
-          </div>
+          <div class="service-circle-wrap"><div class="service-circle"><img src="serv-4.jpg" alt="IBO Community" class="service-circle-img" /></div></div>
           <h5 class="service-title">IBO Community</h5>
           <p class="service-desc">Entra nella rete di affiliati Cronos in tutta Italia.</p>
         </div>
         <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle">
-              <!-- serv-5.jpg: sostituisci con la tua foto AI -->
-              <img src="serv-5.jpg" alt="IBO Back Office" class="service-circle-img" />
-            </div>
-          </div>
+          <div class="service-circle-wrap"><div class="service-circle"><img src="serv-5.jpg" alt="IBO Back Office" class="service-circle-img" /></div></div>
           <h5 class="service-title">IBO Back Office</h5>
           <p class="service-desc">Gestisci tutto dalla tua area riservata, 24/7.</p>
         </div>
@@ -287,27 +287,20 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       GALLERIA — Carousel automatico
-       Le foto scorrono ogni 3 secondi.
-       Aggiungi le tue foto cambiando src="gallery-X.jpg"
+       GALLERIA — Carousel
   ══════════════════════════════════════ -->
   <section id="galleria">
     <div class="container-xl section-inner">
 
-      <!-- Titolo -->
       <div class="text-center reveal mb-5">
         <span class="section-label">Galleria</span>
         <h2 class="section-title">I nostri momenti.</h2>
-        <p class="text-muted-custom mx-auto" style="max-width:500px;">
-          Scorrono le immagini della nostra community. Ogni foto racconta una storia.
-        </p>
+        <p class="text-muted-custom mx-auto" style="max-width:500px;">Scorrono le immagini della nostra community. Ogni foto racconta una storia.</p>
       </div>
 
-      <!-- Wrapper carousel con bordo glow -->
       <div class="gallery-carousel-wrap reveal delay-1">
         <div id="galleryCarousel" class="carousel slide">
 
-          <!-- Puntini indicatori slide -->
           <div class="carousel-indicators gallery-indicators">
             <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
             <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
@@ -316,115 +309,71 @@
             <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
           </div>
 
-          <!-- Slides — sostituisci gallery-X.jpg con le tue foto -->
           <div class="carousel-inner gallery-inner-wrap">
-
             <div class="carousel-item active">
               <div class="gallery-slide">
                 <img src="gallery-1.jpg" alt="Foto 1" class="gallery-slide-img" />
-                <div class="gallery-slide-overlay">
-                  <span class="gallery-slide-label">
-                    <i class="fa-solid fa-images me-2"></i>Momento 1
-                  </span>
-                </div>
+                <div class="gallery-slide-overlay"><span class="gallery-slide-label"><i class="fa-solid fa-images me-2"></i>Momento 1</span></div>
               </div>
             </div>
-
             <div class="carousel-item">
               <div class="gallery-slide">
                 <img src="gallery-2.jpg" alt="Foto 2" class="gallery-slide-img" />
-                <div class="gallery-slide-overlay">
-                  <span class="gallery-slide-label">
-                    <i class="fa-solid fa-images me-2"></i>Momento 2
-                  </span>
-                </div>
+                <div class="gallery-slide-overlay"><span class="gallery-slide-label"><i class="fa-solid fa-images me-2"></i>Momento 2</span></div>
               </div>
             </div>
-
             <div class="carousel-item">
               <div class="gallery-slide">
                 <img src="gallery-3.jpg" alt="Foto 3" class="gallery-slide-img" />
-                <div class="gallery-slide-overlay">
-                  <span class="gallery-slide-label">
-                    <i class="fa-solid fa-images me-2"></i>Momento 3
-                  </span>
-                </div>
+                <div class="gallery-slide-overlay"><span class="gallery-slide-label"><i class="fa-solid fa-images me-2"></i>Momento 3</span></div>
               </div>
             </div>
-
             <div class="carousel-item">
               <div class="gallery-slide">
                 <img src="gallery-4.jpg" alt="Foto 4" class="gallery-slide-img" />
-                <div class="gallery-slide-overlay">
-                  <span class="gallery-slide-label">
-                    <i class="fa-solid fa-images me-2"></i>Momento 4
-                  </span>
-                </div>
+                <div class="gallery-slide-overlay"><span class="gallery-slide-label"><i class="fa-solid fa-images me-2"></i>Momento 4</span></div>
               </div>
             </div>
-
             <div class="carousel-item">
               <div class="gallery-slide">
                 <img src="gallery-5.jpg" alt="Foto 5" class="gallery-slide-img" />
-                <div class="gallery-slide-overlay">
-                  <span class="gallery-slide-label">
-                    <i class="fa-solid fa-images me-2"></i>Momento 5
-                  </span>
-                </div>
+                <div class="gallery-slide-overlay"><span class="gallery-slide-label"><i class="fa-solid fa-images me-2"></i>Momento 5</span></div>
               </div>
             </div>
-
           </div>
 
-          <!-- Freccia sinistra -->
-          <button class="carousel-control-prev gallery-arrow gallery-arrow-prev"
-                  type="button"
-                  data-bs-target="#galleryCarousel"
-                  data-bs-slide="prev">
+          <button class="carousel-control-prev gallery-arrow gallery-arrow-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
             <i class="fa-solid fa-chevron-left"></i>
           </button>
-
-          <!-- Freccia destra -->
-          <button class="carousel-control-next gallery-arrow gallery-arrow-next"
-                  type="button"
-                  data-bs-target="#galleryCarousel"
-                  data-bs-slide="next">
+          <button class="carousel-control-next gallery-arrow gallery-arrow-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
             <i class="fa-solid fa-chevron-right"></i>
           </button>
 
         </div>
-
-        <!-- Counter slide es: 1 / 5 -->
         <div class="gallery-counter" id="galleryCounter">1 / 5</div>
-
       </div>
+
     </div>
   </section>
 
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       RECENSIONI — Testimonianze affiliati
-       POSIZIONE: dopo la galleria, prima di contatti
+       RECENSIONI
   ══════════════════════════════════════ -->
   <section id="recensioni" class="bg-deep">
     <div class="container-xl section-inner">
 
-      <!-- Titolo -->
       <div class="row justify-content-center text-center mb-5 reveal">
         <div class="col-lg-7">
           <span class="section-label">Recensioni</span>
           <h2 class="section-title">La loro storia<br/><span style="color:var(--glow)">può essere la tua.</span></h2>
-          <p class="text-muted-custom">
-            Leggi cosa dicono le persone che hanno già scelto IBO Community.
-          </p>
+          <p class="text-muted-custom">Leggi cosa dicono le persone che hanno già scelto IBO Community.</p>
         </div>
       </div>
 
-      <!-- 4 card testimonianze -->
       <div class="row g-4 reveal">
 
-        <!-- Testimonianza 1 — testi-1.jpg: foto reale della persona -->
         <div class="col-md-6 col-lg-3">
           <div class="testi-card">
             <div class="testi-photo-wrap">
@@ -441,7 +390,6 @@
           </div>
         </div>
 
-        <!-- Testimonianza 2 — testi-2.jpg: foto reale della persona -->
         <div class="col-md-6 col-lg-3">
           <div class="testi-card">
             <div class="testi-photo-wrap">
@@ -458,7 +406,6 @@
           </div>
         </div>
 
-        <!-- Testimonianza 3 — testi-3.jpg: foto reale della persona -->
         <div class="col-md-6 col-lg-3">
           <div class="testi-card">
             <div class="testi-photo-wrap">
@@ -475,7 +422,6 @@
           </div>
         </div>
 
-        <!-- Testimonianza 4 — testi-4.jpg: foto reale della persona -->
         <div class="col-md-6 col-lg-3">
           <div class="testi-card">
             <div class="testi-photo-wrap">
@@ -499,7 +445,7 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       UNISCITI — Form iscrizione
+       UNISCITI
   ══════════════════════════════════════ -->
   <section id="unisciti">
     <div class="container-xl section-inner">
@@ -507,11 +453,8 @@
 
         <span class="section-label">Unisciti a Noi</span>
         <h2 class="section-title">Pronto a fare parte<br/>di qualcosa di grande?</h2>
-        <p class="text-muted-custom mb-5">
-          Entrare è semplice. Lascia la tua email e ti contatteremo per darti accesso.
-        </p>
+        <p class="text-muted-custom mb-5">Entrare è semplice. Lascia la tua email e ti contatteremo per darti accesso.</p>
 
-        <!-- 3 step di iscrizione -->
         <div class="row g-3 mb-5 text-start">
           <div class="col-md-4">
             <div class="step">
@@ -539,7 +482,6 @@
           </div>
         </div>
 
-        <!-- Form email -->
         <div class="join-form d-flex gap-2 justify-content-center flex-wrap">
           <input id="join-email" type="email" class="form-control custom-input" placeholder="La tua email..." />
           <button class="btn btn-hero" onclick="handleJoin()">
@@ -547,7 +489,6 @@
           </button>
         </div>
 
-        <!-- Messaggio conferma (visibile dopo il click) -->
         <p id="join-msg" class="mt-3 success-msg" style="display:none;">
           <i class="fa-solid fa-circle-check me-1"></i>
           Perfetto! Ti contatteremo presto. Benvenuto! 🎉
@@ -560,20 +501,16 @@
   <div class="divider"></div>
 
   <!-- ══════════════════════════════════════
-       CONTATTI — Form contatto + info
+       CONTATTI
   ══════════════════════════════════════ -->
   <section id="contatti">
     <div class="container-xl section-inner">
       <div class="row g-5">
 
-        <!-- Info contatti sinistra -->
         <div class="col-lg-5 reveal">
           <span class="section-label">Contatti</span>
           <h2 class="section-title">Parliamo insieme.</h2>
-          <p class="text-muted-custom mb-4">
-            Hai domande o vuoi saperne di più? Siamo sempre felici di rispondere
-            e conoscere nuove persone.
-          </p>
+          <p class="text-muted-custom mb-4">Hai domande o vuoi saperne di più? Siamo sempre felici di rispondere e conoscere nuove persone.</p>
           <div class="d-flex flex-column gap-3">
             <a class="contact-item" href="mailto:info@community.it">
               <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
@@ -594,7 +531,6 @@
           </div>
         </div>
 
-        <!-- Form messaggio destra -->
         <div class="col-lg-7 reveal delay-1">
           <div class="contact-form-box">
             <div class="row g-3 mb-3">
@@ -618,7 +554,6 @@
             <button class="btn btn-hero" onclick="handleContact()">
               <i class="fa-solid fa-paper-plane me-2"></i>Invia messaggio
             </button>
-            <!-- Messaggio conferma (visibile dopo il click) -->
             <p id="contact-msg" class="mt-3 success-msg" style="display:none;">
               <i class="fa-solid fa-circle-check me-1"></i>
               Messaggio inviato! Ti risponderemo presto.
@@ -630,286 +565,120 @@
     </div>
   </section>
 
- <!-- ══════════════════════════════════════
-     FOOTER
-══════════════════════════════════════ -->
-<footer class="site-footer">
-  <div class="container-xl">
+  <!-- ══════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container-xl">
 
-    <!-- Nome azienda centrato -->
-    <div class="text-center mb-3">
-      <span class="footer-brand-name">IBO Community</span>
-      <span class="footer-brand-tag d-block">Cronos Escape Room — Roma</span>
-    </div>
+      <div class="text-center mb-3">
+        <span class="footer-brand-name">IBO Community</span>
+        <span class="footer-brand-tag d-block">Cronos Escape Room — Roma</span>
+      </div>
 
-    <!-- Icone social centrate -->
-    <div class="d-flex justify-content-center gap-3 mb-4">
-      <!-- Cambia href="#" con il link reale della tua pagina Facebook -->
-      <a href="#" class="footer-social" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <!-- Cambia href="#" con il link reale del tuo profilo Instagram -->
-      <a href="#" class="footer-social" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-    </div>
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <a href="#" class="footer-social" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="footer-social" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+      </div>
 
-    <!-- Linea divisoria -->
-    <div class="footer-divider"></div>
+      <div class="footer-divider"></div>
 
-    <!-- Copyright + link legali -->
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
-
-      <p class="footer-copy mb-0">
-        © 2026 <strong>IBO Community</strong>. Tutti i diritti riservati.
-      </p>
-
-      <!-- Link legali -->
-      <ul class="footer-legal list-unstyled d-flex flex-wrap gap-3 mb-0">
-        <li><a href="cookie.html">Cookie Policy</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-        <li><a href="termini.html">Termini di Servizio</a></li>
-      </ul>
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <p class="footer-copy mb-0">
+          © 2026 <strong>IBO Community</strong>. Tutti i diritti riservati.
+        </p>
+        <ul class="footer-legal list-unstyled d-flex flex-wrap gap-3 mb-0">
+          <li><a href="cookie.html">Cookie Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="termini.html">Termini di Servizio</a></li>
+        </ul>
+      </div>
 
     </div>
+  </footer>
 
-  </div>
-</footer>
-
-  <!-- Bootstrap 5 JS — necessario per il carousel e altri componenti -->
+  <!-- Bootstrap 5 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 
-  <!-- ══════════════════════════════════════
-       JAVASCRIPT — Stelle, Scroll, Forms, Carousel
-  ══════════════════════════════════════ -->
   <script>
-    /* ══════════════════════════════════════════
-       STARS — Stelle animate sullo sfondo
-
-       Usiamo un elemento <canvas> che è come un
-       foglio da disegno digitale. Ogni volta che
-       la funzione drawStars() viene chiamata,
-       cancella il foglio e ridisegna le stelle
-       in posizione leggermente diversa, creando
-       l'effetto animazione.
-    ══════════════════════════════════════════ */
-
-    /* getElementById cerca nella pagina HTML l'elemento
-       con id="stars-canvas" e lo salva nella variabile canvas.
-       getContext('2d') apre gli "strumenti da disegno" 2D */
+    /* ── Stars ── */
     const canvas = document.getElementById('stars-canvas');
     const ctx    = canvas.getContext('2d');
-
-    /* Creiamo un array vuoto dove metteremo tutte le stelle.
-       Un array è come una lista, tipo una lista della spesa */
-    let stars = [];
-
-    /* Questa funzione aggiorna la dimensione del canvas
-       ogni volta che la finestra del browser cambia dimensione.
-       window.innerWidth e window.innerHeight sono la larghezza
-       e altezza attuale della finestra del browser */
-    function resize() {
-      canvas.width  = window.innerWidth;
-      canvas.height = window.innerHeight;
-    }
-
-    /* Questa funzione crea "n" stelle (di default 200).
-       Array.from crea un array di n elementi.
-       Per ogni stella salviamo:
-       - x, y    → posizione casuale sullo schermo
-       - r       → raggio (dimensione) casuale tra 0.2 e 1.4
-       - alpha   → angolo di partenza casuale per l'animazione
-       - speed   → velocità di pulsazione casuale */
+    let stars    = [];
+    function resize() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
     function initStars(n = 200) {
       stars = Array.from({ length: n }, () => ({
-        x:     Math.random() * canvas.width,
-        y:     Math.random() * canvas.height,
-        r:     Math.random() * 1.2 + 0.2,
-        alpha: Math.random() * Math.PI * 2,
+        x: Math.random() * canvas.width, y: Math.random() * canvas.height,
+        r: Math.random() * 1.2 + 0.2, alpha: Math.random() * Math.PI * 2,
         speed: Math.random() * 0.006 + 0.002,
       }));
     }
-
-    /* Questa funzione disegna TUTTE le stelle ad ogni fotogramma.
-       requestAnimationFrame dice al browser di richiamare
-       questa stessa funzione nel prossimo fotogramma
-       (circa 60 volte al secondo), creando l'animazione */
     function drawStars() {
-
-      /* Cancella tutto il canvas prima di ridisegnare */
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      /* Per ogni stella nell'array... */
       stars.forEach(s => {
-
-        /* Aumenta l'alpha di ogni stella della sua velocità.
-           Math.sin crea un valore che oscilla tra -1 e +1,
-           così la stella "pulsa" diventando più chiara e più scura.
-           (sin + 1) / 2 trasforma il range in 0→1 */
         s.alpha += s.speed;
         const a = (Math.sin(s.alpha) + 1) / 2;
-
-        /* Disegna la stella come un cerchio pieno */
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(126,180,255,${a * 0.8})`;
-        ctx.fill();
+        ctx.beginPath(); ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(126,180,255,${a * 0.8})`; ctx.fill();
       });
-
-      /* Chiede al browser di eseguire drawStars() di nuovo
-         al prossimo fotogramma → crea il loop infinito */
       requestAnimationFrame(drawStars);
     }
-
-    /* Eseguiamo le tre funzioni nell'ordine giusto */
     resize(); initStars(); drawStars();
-
-    /* Ogni volta che l'utente ridimensiona la finestra
-       del browser, ricreiamo il canvas e le stelle */
     window.addEventListener('resize', () => { resize(); initStars(); });
 
-
-    /* ══════════════════════════════════════════
-       SCROLL REVEAL — Elementi appaiono allo scroll
-
-       Quando l'utente scorre la pagina verso il basso,
-       gli elementi con classe CSS .reveal appaiono
-       con una bella animazione di fade-up.
-
-       IntersectionObserver è uno strumento del browser
-       che ci avvisa quando un elemento entra o esce
-       dalla parte visibile della pagina (il viewport).
-    ══════════════════════════════════════════ */
-
-    /* querySelectorAll trova TUTTI gli elementi HTML
-       che hanno la classe "reveal" e li mette in una lista */
+    /* ── Scroll Reveal ── */
     const reveals = document.querySelectorAll('.reveal');
-
-    /* Creiamo l'osservatore. La funzione dentro viene
-       chiamata ogni volta che un elemento .reveal
-       entra o esce dal viewport visibile */
     const io = new IntersectionObserver(entries => {
-
-      /* "entries" è la lista degli elementi che hanno
-         cambiato stato (entrati o usciti dal viewport) */
-      entries.forEach(e => {
-
-        /* isIntersecting = true significa che l'elemento
-           è entrato nella parte visibile della pagina */
-        if (e.isIntersecting) {
-
-          /* Aggiunge la classe "visible" all'elemento.
-             Nel CSS, .reveal.visible ha opacity:1 e
-             transform:none → l'elemento appare con animazione */
-          e.target.classList.add('visible');
-
-          /* Smette di osservare questo elemento perché
-             l'animazione deve avvenire solo una volta */
-          io.unobserve(e.target);
-        }
-      });
-
-    /* threshold: 0.1 significa che l'osservatore si attiva
-       quando almeno il 10% dell'elemento è visibile */
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
     }, { threshold: 0.1 });
-
-    /* Diciamo all'osservatore di "guardare" ogni elemento .reveal */
     reveals.forEach(el => io.observe(el));
 
+    /* ── Forms ── */
+    function handleJoin()    { document.getElementById('join-msg').style.display    = 'block'; }
+    function handleContact() { document.getElementById('contact-msg').style.display = 'block'; }
 
-    /* ══════════════════════════════════════════
-       FORMS — Messaggi di conferma invio
-
-       Quando l'utente clicca i bottoni "Unisciti" o
-       "Invia messaggio", mostriamo un messaggio
-       di conferma verde sotto al form.
-    ══════════════════════════════════════════ */
-
-    /* Mostra il messaggio di successo nel form "Unisciti" */
-    function handleJoin() {
-      document.getElementById('join-msg').style.display = 'block';
-    }
-
-    /* Mostra il messaggio di successo nel form "Contatti" */
-    function handleContact() {
-      document.getElementById('contact-msg').style.display = 'block';
-    }
-
-
-    /* ══════════════════════════════════════════
-       NAVBAR — Contattaci scorre alla sezione Unisciti
-
-       Invece di portare l'utente alla sezione #contatti,
-       il click su "Contattaci" porta a #unisciti.
-       scrollIntoView è una funzione del browser che
-       scorre automaticamente fino all'elemento scelto.
-    ══════════════════════════════════════════ */
-
-    /* querySelector trova il PRIMO elemento con classe "nav-cta" */
+    /* ── Navbar Contattaci → scroll a Unisciti ── */
     const navCta = document.querySelector('.nav-cta');
-
-    /* Controlliamo che esista prima di usarlo */
     if (navCta) {
-
-      /* addEventListener "ascolta" l'evento 'click' */
-      navCta.addEventListener('click', function (e) {
-
-        /* preventDefault blocca il comportamento normale del link */
+      navCta.addEventListener('click', function(e) {
         e.preventDefault();
-
-        /* Cerca l'elemento con id="unisciti" nella pagina */
         const target = document.getElementById('unisciti');
-
-        if (target) {
-          /* scrollIntoView scorre la pagina fino all'elemento.
-             behavior: 'smooth' rende lo scroll fluido */
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        if (target) { const offset = 80; const top = target.getBoundingClientRect().top + window.scrollY - offset; window.scrollTo({ top, behavior: 'smooth' }); }
+      });
+    }
+    const navCtaMobile = document.querySelector('.nav-cta-mobile');
+    if (navCtaMobile) {
+      navCtaMobile.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.getElementById('unisciti');
+        if (target) { const offset = 80; const top = target.getBoundingClientRect().top + window.scrollY - offset; window.scrollTo({ top, behavior: 'smooth' }); }
       });
     }
 
-
-    /* ══════════════════════════════════════════
-       GALLERY CAROUSEL — Avvio automatico + counter
-
-       Il carousel di Bootstrap mostra le foto
-       una alla volta e le scorre automaticamente.
-       Inizializzandolo via JavaScript abbiamo più controllo.
-    ══════════════════════════════════════════ */
-
-    /* Prendiamo i due elementi del carousel dalla pagina */
+    /* ── Gallery Carousel ── */
     const carouselEl = document.getElementById('galleryCarousel');
     const counterEl  = document.getElementById('galleryCounter');
-
-    /* Controlliamo che il carousel esista nella pagina */
     if (carouselEl) {
-
-      /* Contiamo quanti .carousel-item ci sono dentro
-         per sapere il totale delle slide (es. 5) */
       const total = carouselEl.querySelectorAll('.carousel-item').length;
-
-      /* Inizializza Bootstrap Carousel via JS con:
-         - interval → millisecondi tra uno slide e l'altro (3000 = 3 sec)
-         - ride     → 'carousel' avvia lo scorrimento automatico
-         - wrap     → true fa ricominciare dal primo dopo l'ultimo */
-      const bsCarousel = new bootstrap.Carousel(carouselEl, {
-        interval: 3000,
-        ride:     'carousel',
-        wrap:     true
-      });
-
-      /* Controlliamo che il counter esista prima di usarlo */
+      const bsCarousel = new bootstrap.Carousel(carouselEl, { interval: 3000, ride: 'carousel', wrap: true });
       if (counterEl) {
-
-        /* Ascoltiamo l'evento 'slid.bs.carousel' che Bootstrap
-           lancia DOPO che la transizione di uno slide è finita.
-           event.to contiene l'indice del nuovo slide (parte da 0),
-           quindi aggiungiamo +1 per mostrare "1 / 5" invece di "0 / 5" */
         carouselEl.addEventListener('slid.bs.carousel', event => {
           counterEl.textContent = (event.to + 1) + ' / ' + total;
         });
       }
     }
+
+    /* ── Language Widget — evidenzia lingua attiva ── */
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('lang-active'));
+        this.classList.add('lang-active');
+      });
+    });
   </script>
 
 </body>
