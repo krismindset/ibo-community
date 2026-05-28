@@ -27,21 +27,25 @@
        Desktop: logo + tutti i link + social
        Mobile:  logo + solo Contattaci + social
   ══════════════════════════════════════ -->
- <nav class="navbar fixed-top custom-nav">
-  <div class="container-xl d-flex align-items-center justify-content-between">
+<nav class="navbar fixed-top custom-nav">
+  <div class="container-xl">
 
-    <!-- Logo sinistra -->
-    <a class="navbar-brand nav-logo" href="#">
-      <img src="foto_hero.png" alt="Logo IBO" class="nav-logo-img" />
-    </a>
+    <!-- Riga 1: Logo -->
+    <div class="nav-row-1">
+      <a class="nav-logo" href="#">
+        <img src="foto_hero.png" alt="Logo IBO" class="nav-logo-img" />
+      </a>
+    </div>
 
-    <!-- Link sempre visibili — nessun hamburger, nessuna icona social -->
-    <ul class="navbar-nav flex-row align-items-center nav-links">
-      <li class="nav-item"><a class="nav-link" href="#chi-siamo">La nostra community</a></li>
-      <li class="nav-item"><a class="nav-link" href="#servizi">La tuà opportunità</a></li>
-      <li class="nav-item"><a class="nav-link" href="#galleria">Galleria</a></li>
-      <li class="nav-item"><a class="nav-link nav-cta" href="#unisciti">Contattaci</a></li>
-    </ul>
+    <!-- Riga 2: Link scrollabili -->
+    <div class="nav-row-2">
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#chi-siamo">La nostra community</a></li>
+        <li><a class="nav-link" href="#servizi">La tuà opportunità</a></li>
+        <li><a class="nav-link" href="#galleria">Galleria</a></li>
+        <li><a class="nav-link nav-cta" href="#unisciti">Contattaci</a></li>
+      </ul>
+    </div>
 
   </div>
 </nav>
@@ -171,51 +175,9 @@
         </div>
       </div>
 
-      <!-- Numeri -->
-      <div class="row g-3 mb-5 reveal">
-        <div class="col-12 text-center mb-3">
-          <span class="section-label">I numeri di Cronos</span>
-        </div>
-        <div class="col-md-4">
-          <div class="stat-card text-center">
-            <div class="stat-card-num">19</div>
-            <div class="stat-card-label">Sedi attive in Italia</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="stat-card text-center">
-            <div class="stat-card-num">12K+</div>
-            <div class="stat-card-label">Recensioni a 5 stelle</div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="stat-card text-center">
-            <div class="stat-card-num">1</div>
-            <div class="stat-card-label">Posto disponibile a Roma</div>
-          </div>
-        </div>
-      </div>
+    
 
-      <!-- Alert CTA -->
-      <div class="row justify-content-center reveal">
-        <div class="col-lg-8">
-          <div class="alert-box">
-            <div class="alert-box-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
-            <div>
-              <h4>Attenzione: non è per tutti.</h4>
-              <p>È per chi vuole un business <strong>serio</strong> e ha un minimo budget per l'investimento iniziale. Se cerchi solo un modo per "diventare ricco dal divano", passa oltre.</p>
-              <div class="d-flex align-items-center flex-wrap gap-3 mt-3">
-                <a href="#unisciti" class="btn btn-hero">
-                  <i class="fa-solid fa-arrow-right me-2"></i>Scopri come funziona
-                </a>
-                <span class="alert-spot">
-                  <i class="fa-solid fa-location-dot me-1"></i> Solo 1 posto per Roma
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
 
     </div>
   </section>
