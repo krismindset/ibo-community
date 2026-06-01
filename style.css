@@ -702,7 +702,7 @@ section { position: relative; z-index: 1; }
   .intro-img {
     content: url('foto_hero_mobile.jpg');
     object-fit: cover;
-    object-position: center top;
+    object-position: center 30%; /* scende verso il basso per vedere tutta la scena */
     width: 100%;
     height: 100%;
     display: block;
