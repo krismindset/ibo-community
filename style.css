@@ -690,4 +690,15 @@ section { position: relative; z-index: 1; }
     font-size: 0.72rem;
   }
   .nav-links { gap: 0.8rem; align-items: flex-start; }
+
+  /* ─────────────────────────────────────────
+   INTRO — Foto verticale su mobile
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .intro-img {
+    content: url('foto_hero_mobile.jpg');
+    object-fit: cover;
+    object-position: center;
+  }
+}
 }
