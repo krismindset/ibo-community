@@ -373,7 +373,7 @@ section { position: relative; z-index: 1; }
 
   /* Intro — foto verticale mobile */
   #intro        { height: 100vh; padding-top: 0; }
-  .intro-img { content: url('foto_hero_mobile.jpg'); object-fit: cover; object-position: center 80%; width: 100%; height: 100%; display: block; }
+  .intro-img { content: url('foto_hero_mobile.jpg'); object-fit: cover; object-position: center 20%; width: 100%; height: 100%; display: block; }
    
   /* Sezioni */
   .section-inner  { padding: 5rem 1.2rem; }
