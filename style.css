@@ -324,7 +324,36 @@ section { position: relative; z-index: 1; }
    20. FIX SCROLL NAVBAR
 ───────────────────────────────────────── */
 #chi-siamo, #servizi, #galleria, #recensioni, #unisciti, #contatti {
-  scroll-margin-top: 120px;
+  scroll-margin-top: 40px;
+}
+
+/* Cerchi con icone Font Awesome */
+.service-circle-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(46, 108, 255, 0.1);
+}
+
+.service-circle-icon i {
+  font-size: 2.8rem;
+  color: var(--glow);
+  filter: drop-shadow(0 0 12px rgba(77, 139, 255, 0.7));
+}
+
+/* ─────────────────────────────────────────
+   Fix foto Esthela testimonianza
+───────────────────────────────────────── */
+.testi-esthela-wrap {
+  height: 220px !important;
+  overflow: hidden !important;
+}
+
+.testi-esthela-img {
+  object-fit: cover !important;
+  object-position: center 25% !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 
@@ -373,8 +402,7 @@ section { position: relative; z-index: 1; }
 
   /* Intro — foto verticale mobile */
   #intro        { height: 100vh; padding-top: 0; }
- .intro-img { content: url('foto_hero_mobile__.jpg'); object-fit: cover; object-position: center 0%; width: 100%; height: 100%; display: block; }
-   
+.intro-img { content: url('foto_hero_mobile__.jpg'); object-fit: cover; object-position: center -200%; width: 100%; height: 100%; display: block; }
   /* Sezioni */
   .section-inner  { padding: 5rem 1.2rem; }
   .orb-1 { width: 280px; height: 280px; }
@@ -413,6 +441,9 @@ section { position: relative; z-index: 1; }
   .nav-links { gap: 0.8rem; }
   .custom-nav .nav-link { font-size: 0.68rem; }
   .nav-cta      { padding: 0.35rem 0.8rem !important; font-size: 0.68rem !important; }
+  .nav-links li {
+  text-align: center;
+}
 }
 
 /* max 480px Telefoni medi */
