@@ -448,6 +448,10 @@ section { position: relative; z-index: 1; }
   .testi-photo-v2 { height: 200px; }
 }
 
+.testi-photo-v2 {
+  height: 250px;
+}
+
 
 
 /* max 576px Telefoni grandi */
