@@ -315,7 +315,7 @@ section { position: relative; z-index: 1; }
    19. FIX SCROLL NAVBAR
 ───────────────────────────────────────── */
 #chi-siamo, #servizi, #galleria, #recensioni, #contatti {
-  scroll-margin-top:  1px;
+  scroll-margin-top:  10px;
 }
 
 /* ─────────────────────────────────────────
@@ -370,6 +370,14 @@ section { position: relative; z-index: 1; }
 .nav-row-2 {
   display: flex;
   align-items: center;
+}
+
+.custom-nav {
+  top: 0 !important;
+  position: fixed !important;
+}
+.custom-nav {
+  min-height: 60px;
 }
 
 
