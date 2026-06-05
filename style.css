@@ -68,52 +68,109 @@ section { position: relative; z-index: 1; }
 /* ─────────────────────────────────────────
    5. NAVIGATION
 ───────────────────────────────────────── */
-.custom-nav {
-  background: rgba(4, 8, 26, 0.92) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: var(--border-subtle);
-  padding: 0.6rem 0;
-  z-index: 1000;
+/* ─────────────────────────────────────────
+   NAVBAR — sempre fissa, non shrink
+───────────────────────────────────────── */
+.custom-nav,
+.custom-nav.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  transform: none !important;
+  transition: none !important;
+  background: rgba(4, 8, 26, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  border-bottom: 1px solid rgba(46, 108, 255, 0.18) !important;
+  padding: 0.7rem 0 !important;
+  z-index: 1000 !important;
 }
-.nav-logo     { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-.nav-logo-img { height: 44px; width: auto; object-fit: contain; }
-.nav-row-1    { display: flex; align-items: center; justify-content: space-between; width: 100%; }
-.nav-row-2    { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding: 0.3rem 0 0.1rem; }
-.nav-row-2::-webkit-scrollbar { display: none; }
-.nav-links    { display: flex !important; flex-wrap: nowrap; gap: 1.5rem; list-style: none; margin: 0; padding: 0; width: max-content; }
+
+.nav-logo { text-decoration: none; flex-shrink: 0; }
+.nav-logo-img { height: 44px; width: auto; object-fit: contain; display: block; }
+
+.nav-links {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .custom-nav .nav-link {
-  font-size: 0.84rem; font-weight: 500; letter-spacing: 0.04em;
-  color: #ffffff !important; padding: 0.3rem 0 !important;
-  text-decoration: none; position: relative; transition: opacity 0.2s;
-  white-space: nowrap; display: block;
+  font-size: 0.86rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #ffffff !important;
+  padding: 0.3rem 0 !important;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: opacity 0.2s;
 }
 .custom-nav .nav-link::after {
-  content: ''; position: absolute; bottom: -2px; left: 0;
-  width: 0; height: 2px; background: var(--glow);
-  border-radius: 2px; transition: width 0.25s ease;
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 2px;
+  background: var(--glow);
+  border-radius: 2px;
+  transition: width 0.25s ease;
 }
-.custom-nav .nav-link:hover { opacity: 0.85; }
+.custom-nav .nav-link:hover { opacity: 0.8; }
 .custom-nav .nav-link:hover::after { width: 100%; }
+
 .nav-cta {
-  padding: 0.42rem 1.1rem !important; border-radius: var(--radius-sm) !important;
-  background: var(--accent) !important; color: #ffffff !important;
-  font-weight: 700 !important; letter-spacing: 0.02em !important;
-  transition: background 0.25s, box-shadow 0.25s !important;
+  padding: 0.42rem 1.1rem !important;
+  border-radius: 8px !important;
+  background: var(--accent) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important;
 }
 .nav-cta::after { display: none !important; }
-.nav-cta:hover  { background: var(--glow) !important; opacity: 1 !important; box-shadow: 0 0 20px rgba(77,139,255,0.5) !important; }
+.nav-cta:hover { background: var(--glow) !important; opacity: 1 !important; }
 
-/* Desktop: tutto su una riga */
-@media (min-width: 768px) {
-  .custom-nav .container-xl { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; }
-  .nav-row-1 { width: auto; }
-  .nav-row-2 { width: auto; overflow: visible; padding: 0; }
-  .nav-links { gap: 2rem; width: auto; }
-  .custom-nav .nav-link { font-size: 0.86rem; white-space: nowrap; }
-  .nav-logo-img { height: 44px; }
+/* Mobile */
+@media (max-width: 768px) {
+  .custom-nav .container-xl {
+    gap: 0.8rem;
+    flex-wrap: nowrap;
+  }
+  .nav-logo-img { height: 34px; }
+  .nav-links {
+    gap: 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .custom-nav .nav-link {
+    font-size: 0.68rem;
+    white-space: nowrap;
+  }
+  .nav-cta {
+    padding: 0.35rem 0.8rem !important;
+    font-size: 0.68rem !important;
+  }
 }
 
+@media (max-width: 375px) {
+  .nav-logo-img { height: 28px; }
+  .nav-links { gap: 0.7rem; }
+  .custom-nav .nav-link { font-size: 0.6rem; }
+  .nav-cta { padding: 0.3rem 0.65rem !important; font-size: 0.6rem !important; }
+}
+
+@media (max-width: 320px) {
+  .nav-logo-img { height: 24px; }
+  .nav-links { gap: 0.5rem; }
+  .custom-nav .nav-link { font-size: 0.55rem; }
+  .nav-cta { padding: 0.25rem 0.5rem !important; font-size: 0.55rem !important; }
+}
 
 /* ─────────────────────────────────────────
    6. WIDGET LINGUA
