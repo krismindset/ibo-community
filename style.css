@@ -424,6 +424,24 @@ section { position: relative; z-index: 1; }
   .testi-photo-v2 { height: 250px; }
 }
 
+@media (max-width: 768px) {
+  /* ... resto del mobile ... */
+  
+  /* Foto testimonials intere con bordi arrotondati */
+  .testi-photo-v2 {
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: var(--radius-lg);
+  }
+  
+  .testi-card-v2 {
+    border-radius: var(--radius-lg);
+    overflow: visible;
+  }
+}
+
 @media (max-width: 576px) {
   #hero           { padding: 7rem 1.2rem 4rem; }
   .hero-badge     { font-size: 0.78rem; padding: 0.44rem 1.1rem; }
