@@ -221,7 +221,7 @@ Quando inizi l'attività diventi un Imprenditore Indipendente o IBO. L'azienda t
   <!-- ══════════════════════════════════════
        GALLERIA — Carousel
   ══════════════════════════════════════ -->
-  <section id="galleria">
+ <section id="galleria">
   <div class="container-xl section-inner">
 
     <div class="text-center reveal mb-5">
@@ -232,22 +232,9 @@ Quando inizi l'attività diventi un Imprenditore Indipendente o IBO. L'azienda t
 
     <div class="gallery-carousel-wrap reveal delay-1">
       <div id="galleryCarousel" class="carousel slide">
-
-        <!-- Indicators generati con JS -->
         <div class="carousel-indicators gallery-indicators" id="galleryIndicators"></div>
-
-        <!-- Slides generate con JS -->
         <div class="carousel-inner gallery-inner-wrap" id="galleryInner"></div>
-
-        <button class="carousel-control-prev gallery-arrow gallery-arrow-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="carousel-control-next gallery-arrow gallery-arrow-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
       </div>
-      <div class="gallery-counter" id="galleryCounter">1 / 39</div>
     </div>
 
   </div>
@@ -520,11 +507,9 @@ if (navCtaMobile) {
 const TOTAL_PHOTOS = 39;
 const indicatorsEl = document.getElementById('galleryIndicators');
 const innerEl      = document.getElementById('galleryInner');
-const counterEl    = document.getElementById('galleryCounter');
 const carouselEl   = document.getElementById('galleryCarousel');
 
 for (let i = 1; i <= TOTAL_PHOTOS; i++) {
-  // Indicator
   const btn = document.createElement('button');
   btn.type = 'button';
   btn.setAttribute('data-bs-target', '#galleryCarousel');
@@ -532,28 +517,18 @@ for (let i = 1; i <= TOTAL_PHOTOS; i++) {
   if (i === 1) { btn.classList.add('active'); btn.setAttribute('aria-current', 'true'); }
   indicatorsEl.appendChild(btn);
 
-  // Slide
   const item = document.createElement('div');
   item.className = 'carousel-item' + (i === 1 ? ' active' : '');
   item.innerHTML = `
     <div class="gallery-slide">
       <img src="foto/${i}.jpg" alt="Foto ${i}" class="gallery-slide-img" />
-      <div class="gallery-slide-overlay">
-        <span class="gallery-slide-label">
-          <i class="fa-solid fa-images me-2"></i>Momento ${i}
-        </span>
-      </div>
     </div>`;
   innerEl.appendChild(item);
 }
 
 if (carouselEl) {
-  const bsCarousel = new bootstrap.Carousel(carouselEl, { interval: 3000, ride: 'carousel', wrap: true });
-  if (counterEl) {
-    carouselEl.addEventListener('slid.bs.carousel', event => {
-      counterEl.textContent = (event.to + 1) + ' / ' + TOTAL_PHOTOS;
-    });
-  }
+  const bsCarousel = new bootstrap.Carousel(carouselEl, { interval: 3000, ride: false, wrap: true });
+  setTimeout(() => { bsCarousel.cycle(); }, 100);
 }
 
 /* ── Language Widget — evidenzia lingua attiva ── */
