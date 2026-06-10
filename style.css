@@ -336,6 +336,28 @@ section { position: relative; z-index: 1; }
 .about-photo-mobile { display: block; }
 
 
+.carousel-control-prev,
+.carousel-control-next {
+  width: auto;
+  opacity: 0.8;
+}
+
+.carousel-control-prev { left: 10px; }
+.carousel-control-next { right: 10px; }
+
+.carousel-control-prev i,
+.carousel-control-next i {
+  color: white;
+  filter: drop-shadow(0 0 4px rgba(0,0,0,0.6));
+  transition: transform 0.2s;
+}
+
+.carousel-control-prev:hover i,
+.carousel-control-next:hover i {
+  transform: scale(1.2);
+}
+
+
 /* ══════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════ */
