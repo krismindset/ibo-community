@@ -327,6 +327,18 @@ section { position: relative; z-index: 1; }
 ───────────────────────────────────────── */
 #chi-siamo, #servizi, #galleria, #recensioni, #contatti { scroll-margin-top: 10px; }
 
+/* ── Fix globale testi bianchi ── */
+.section-title,
+.text-muted-custom,
+.service-title,
+.service-desc,
+.hero-badge,
+.stat-num,
+.stat-label,
+.testi-name,
+.testi-body p,
+.footer-brand-name { color: var(--white); }
+
 
 /* ══════════════════════════════════════════
    RESPONSIVE
