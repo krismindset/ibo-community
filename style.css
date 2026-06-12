@@ -364,11 +364,6 @@ section { position: relative; z-index: 1; }
 }
 
 
-.custom-input option {
-  background: #080f2e;
-  color: #e8f0ff;
-}
-
 
 /* ══════════════════════════════════════════
    RESPONSIVE
