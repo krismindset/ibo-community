@@ -189,7 +189,7 @@ section { position: relative; z-index: 1; }
 #chi-siamo { background-color: var(--navy); }
 .about-photo-wrap { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: var(--border-subtle); box-shadow: 0 0 60px rgba(46,108,255,0.2); transition: box-shadow 0.3s, transform 0.3s; }
 .about-photo-wrap:hover { box-shadow: 0 0 80px rgba(77,139,255,0.3); transform: translateY(-3px); }
-.about-photo-main .about-photo { height: 380px; }
+ .about-photo-main .about-photo { height: auto; width: 100%; }
 .about-photo { width: 100%; object-fit: cover; object-position: center; display: block; background: var(--mid); }
 .about-photo-badge { position: absolute; bottom: 1rem; left: 1rem; padding: 0.4rem 0.9rem; border-radius: 999px; background: rgba(4,8,26,0.88); border: 1px solid rgba(240,192,96,0.4); font-size: 0.8rem; font-weight: 600; color: var(--gold); backdrop-filter: blur(8px); }
 .benefit-card { padding: 1.4rem; border-radius: var(--radius-md); background: rgba(4,8,26,0.6); border: var(--border-subtle); height: 100%; transition: border-color 0.3s, transform 0.3s; }
