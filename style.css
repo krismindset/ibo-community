@@ -358,6 +358,18 @@ section { position: relative; z-index: 1; }
 }
 
 
+.gallery-inner-wrap .carousel-item img {
+  object-fit: cover;
+  object-position: 50% 20%; /* orizzontale verticale — abbassa il numero per salire */
+}
+
+
+.custom-input option {
+  background: #080f2e;
+  color: #e8f0ff;
+}
+
+
 /* ══════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════ */
