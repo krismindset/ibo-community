@@ -339,6 +339,24 @@ section { position: relative; z-index: 1; }
 .testi-body p,
 .footer-brand-name { color: var(--white); }
 
+/* ── Cookie Banner ── */
+#cookie-banner {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
+  background: rgba(4,8,26,0.97); border-top: var(--border-subtle);
+  padding: 1rem 2rem; display: flex; align-items: center;
+  justify-content: space-between; gap: 1rem; flex-wrap: wrap;
+  backdrop-filter: blur(12px);
+}
+#cookie-banner p { margin: 0; font-size: 0.88rem; color: var(--white); }
+#cookie-banner a { color: var(--glow); }
+#cookie-banner button {
+  padding: 0.5rem 1.4rem; border-radius: var(--radius-sm);
+  background: var(--accent); color: #fff; border: none;
+  font-weight: 600; font-size: 0.88rem; cursor: pointer;
+  white-space: nowrap; transition: background 0.2s;
+}
+#cookie-banner button:hover { background: var(--glow); }
+
 
 /* ══════════════════════════════════════════
    RESPONSIVE
@@ -404,6 +422,17 @@ section { position: relative; z-index: 1; }
 
   .about-photo-desktop { display: none; }
   .about-photo-mobile  { display: block; }
+}
+
+@media (max-width: 576px) {
+  #cookie-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+  #cookie-banner button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 576px) {
