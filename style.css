@@ -32,18 +32,47 @@
 
 /* ─────────────────────────────────────────
    2. RESET & BASE
+   — Tutto parte da qui per cascata
 ───────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
   background-color: var(--navy);
-  color: var(--white);
+  color: var(--white);          /* ← tutti i testi ereditano bianco */
   font-family: var(--font-body);
   font-size: 16px;
-  line-height: 1.7;
+  line-height: 1.8;             /* ← line-height globale */
   overflow-x: hidden;
 }
 section { position: relative; z-index: 1; }
+
+/* ─────────────────────────────────────────
+   TIPOGRAFIA GLOBALE — cascata da body
+   Sovrascrivere solo dove necessario
+───────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  /* colore ereditato da body = var(--white) */
+}
+
+p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  /* colore ereditato da body = var(--white) */
+}
+
+/* Gradiente sui titoli sezione */
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 1.1rem;
+  background: linear-gradient(135deg, #ffffff 0%, var(--glow) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 
 
 /* ─────────────────────────────────────────
@@ -51,8 +80,7 @@ section { position: relative; z-index: 1; }
 ───────────────────────────────────────── */
 .bg-deep { background-color: var(--deep); }
 .bg-mid  { background-color: var(--mid);  }
-/* Eredita colore bianco dal body — cascata */
-.text-muted-custom { font-size: 1.03rem; margin-bottom: 1.1rem; }
+.text-muted-custom { font-size: 0.95rem; margin-bottom: 1.1rem; line-height: 1.9; }
 
 
 /* ─────────────────────────────────────────
@@ -106,6 +134,24 @@ section { position: relative; z-index: 1; }
   font-weight: 700 !important; letter-spacing: 0.02em !important;
   transition: background 0.25s, box-shadow 0.25s !important;
 }
+
+.nav-cta-contact {
+  padding: 0.42rem 1.1rem !important;
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid rgba(77, 139, 255, 0.6) !important;
+  color: var(--bright) !important;
+  font-weight: 600 !important;
+  background: rgba(46, 108, 255, 0.15) !important;
+  transition: background 0.25s, border-color 0.25s, box-shadow 0.25s !important;
+}
+.nav-cta-contact::after { display: none !important; }
+.nav-cta-contact:hover {
+  background: rgba(46, 108, 255, 0.3) !important;
+  border-color: var(--glow) !important;
+  box-shadow: 0 0 16px rgba(77,139,255,0.4) !important;
+  opacity: 1 !important;
+}
+
 .nav-cta::after { display: none !important; }
 .nav-cta:hover  { background: var(--glow) !important; opacity: 1 !important; box-shadow: 0 0 20px rgba(77,139,255,0.5) !important; }
 
@@ -170,9 +216,8 @@ section { position: relative; z-index: 1; }
 /* ─────────────────────────────────────────
    9. SECTION COMMONS
 ───────────────────────────────────────── */
-.section-inner  { padding: 7rem 1.5rem; }
-.section-label  { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--glow); margin-bottom: 0.75rem; }
-.section-title  { font-family: var(--font-display); font-size: clamp(2rem,4vw,2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: 1.1rem; }
+.section-inner { padding: 7rem 1.5rem; }
+.section-label { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--glow); margin-bottom: 0.75rem; }
 
 
 /* ─────────────────────────────────────────
@@ -206,7 +251,7 @@ section { position: relative; z-index: 1; }
 .service-circle-icon { display: flex; align-items: center; justify-content: center; background: rgba(46,108,255,0.1); }
 .service-circle-icon i { font-size: 2.8rem; color: var(--glow); filter: drop-shadow(0 0 12px rgba(77,139,255,0.7)); }
 .service-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; margin-bottom: 0.4rem; }
-.service-desc  { font-size: 0.84rem; color: rgba(232,240,255,0.8); line-height: 1.55; margin: 0 auto; max-width: 200px; }
+.service-desc  { font-size: 0.84rem; line-height: 1.7; margin: 0 auto; max-width: 200px; color: rgba(232,240,255,0.85); }
 
 
 /* ─────────────────────────────────────────
@@ -246,7 +291,7 @@ section { position: relative; z-index: 1; }
 .testi-name  { font-family: var(--font-display); font-size: 1.05rem; font-weight: 800; margin-bottom: 0.15rem; }
 .testi-city  { font-size: 0.78rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 0.9rem; }
 .testi-quote { font-size: 1.4rem; color: rgba(46,108,255,0.35); display: block; margin-bottom: 0.5rem; }
-.testi-body p { font-size: 0.88rem; color: rgba(232,240,255,0.85); font-style: italic; line-height: 1.65; margin: 0; }
+.testi-body p { font-size: 0.9rem; font-style: italic; line-height: 1.7; margin: 0; }
 
 
 /* ─────────────────────────────────────────
@@ -327,19 +372,10 @@ section { position: relative; z-index: 1; }
 ───────────────────────────────────────── */
 #chi-siamo, #servizi, #galleria, #recensioni, #contatti { scroll-margin-top: 10px; }
 
-/* ── Fix globale testi bianchi ── */
-.section-title,
-.text-muted-custom,
-.service-title,
-.service-desc,
-.hero-badge,
-.stat-num,
-.stat-label,
-.testi-name,
-.testi-body p,
-.footer-brand-name { color: var(--white); }
 
-/* ── Cookie Banner ── */
+/* ─────────────────────────────────────────
+   20. COOKIE BANNER
+───────────────────────────────────────── */
 #cookie-banner {
   position: fixed; bottom: 0; left: 0; right: 0; z-index: 9999;
   background: rgba(4,8,26,0.97); border-top: var(--border-subtle);
@@ -347,7 +383,7 @@ section { position: relative; z-index: 1; }
   justify-content: space-between; gap: 1rem; flex-wrap: wrap;
   backdrop-filter: blur(12px);
 }
-#cookie-banner p { margin: 0; font-size: 0.88rem; color: var(--white); }
+#cookie-banner p { margin: 0; font-size: 0.88rem; }
 #cookie-banner a { color: var(--glow); }
 #cookie-banner button {
   padding: 0.5rem 1.4rem; border-radius: var(--radius-sm);
@@ -425,17 +461,9 @@ section { position: relative; z-index: 1; }
 }
 
 @media (max-width: 576px) {
-  #cookie-banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 1rem;
-  }
-  #cookie-banner button {
-    width: 100%;
-  }
-}
+  #cookie-banner { flex-direction: column; text-align: center; padding: 1rem; }
+  #cookie-banner button { width: 100%; }
 
-@media (max-width: 576px) {
   #hero { padding: 7rem 1.2rem 4rem; }
   .hero-sub { font-size: 0.95rem; }
   .btn-hero { padding: 0.78rem 1.8rem; font-size: 0.9rem; }
