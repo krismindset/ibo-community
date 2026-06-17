@@ -6,26 +6,20 @@
   <title>IBO Community — Diventa Imprenditore Indipendente in Italia</title>
   <meta name="description" content="IBO Community è la community italiana di imprenditori indipendenti. Scopri come guadagnare un reddito residuale con servizi essenziali come energia, luce, gas e internet." />
 
-  <!-- Google Fonts -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="IBO Community — Diventa Imprenditore Indipendente in Italia" />
+  <meta property="og:description" content="Scopri come guadagnare un reddito residuale con IBO Community. Imprenditori indipendenti in tutta Italia." />
+  <meta property="og:image"       content="https://krismindset.github.io/ibo-community/ibo_logo.jpg" />
+  <meta property="og:url"         content="https://krismindset.github.io/ibo-community/" />
+  <meta property="og:locale"      content="it_IT" />
+
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
-
-  <!-- Bootstrap 5 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Font Awesome 6 -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
-
-  <!-- Stili personalizzati -->
   <link rel="stylesheet" href="style.css" />
 </head>
-<!-- ── COOKIE BANNER ── -->
-<div id="cookie-banner" style="display:none;">
-  <p>🍪 Questo sito utilizza cookie tecnici necessari al suo funzionamento. <a href="cookie.html">Leggi la Cookie Policy</a></p>
-  <button onclick="acceptCookies()">Accetta</button>
-</div>
 <body>
 
-  <!-- ── STELLE ANIMATE ── -->
   <canvas id="stars-canvas"></canvas>
 
   <!-- ── NAVBAR ── -->
@@ -35,21 +29,21 @@
         <img src="ibo_logo.jpg" alt="Logo IBO Community" class="nav-logo-img" />
       </a>
       <ul class="nav-links mb-0">
-        <li><a class="nav-link" href="#chi-siamo">La nostra community</a></li>
-        <li><a class="nav-link" href="#servizi">La tua opportunità</a></li>
-        <li><a class="nav-link" href="#galleria">Galleria</a></li>
-      <li><a class="nav-link nav-cta-contact" href="#contatti">Contattaci</a></li>
+        <li><a class="nav-link" href="#chi-siamo" data-it="La nostra community" data-fil="Ang Aming Community">La nostra community</a></li>
+        <li><a class="nav-link" href="#servizi" data-it="La tua opportunità" data-fil="Ang Iyong Opportunity">La tua opportunità</a></li>
+        <li><a class="nav-link" href="#galleria" data-it="Galleria" data-fil="Galleria">Galleria</a></li>
+        <li><a class="nav-link nav-cta-contact" href="#contatti" data-it="Contattaci" data-fil="Mag-Contact">Contattaci</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- ── WIDGET LINGUA ── -->
   <div class="lang-widget">
-    <a href="#" class="lang-btn lang-active" title="Italiano">
+    <a href="#" class="lang-btn lang-active" title="Italiano" data-lang="it">
       <img src="https://flagcdn.com/w20/it.png" alt="IT" style="width:20px; height:auto; border-radius:2px;">
       <span class="lang-label">IT</span>
     </a>
-    <a href="#" class="lang-btn" title="Filipino">
+    <a href="#" class="lang-btn" title="Filipino" data-lang="fil">
       <img src="https://flagcdn.com/w20/ph.png" alt="PH" style="width:20px; height:auto; border-radius:2px;">
       <span class="lang-label">FIL</span>
     </a>
@@ -67,30 +61,30 @@
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
     <div class="container hero-content text-center">
-      <div class="hero-badge">Benvenuto nella nostra Community</div>
-      <p class="hero-sub mx-auto">
+      <div class="hero-badge" data-it="Benvenuto nella nostra Community" data-fil="Welcome sa Aming Community">Benvenuto nella nostra Community</div>
+      <p class="hero-sub mx-auto" data-it="Connettiti con imprenditori italiani, cresci professionalmente e costruisci la tua libertà finanziaria." data-fil="Mag-connect sa mga Pilipinong entrepreneurs sa Italya, lumago professionally at buuin ang iyong financial freedom.">
         Connettiti con imprenditori italiani, cresci professionalmente e costruisci la tua libertà finanziaria.
       </p>
       <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
         <a href="#contatti" class="btn btn-hero">
-          <i class="fa-solid fa-rocket me-2"></i>Unisciti ora
+          <i class="fa-solid fa-rocket me-2"></i><span data-it="Unisciti ora" data-fil="Sumali Na">Unisciti ora</span>
         </a>
         <a href="#chi-siamo" class="btn btn-hero">
-          <i class="fa-solid fa-arrow-down me-2"></i>Scopri di più
+          <i class="fa-solid fa-arrow-down me-2"></i><span data-it="Scopri di più" data-fil="Alamin Pa">Scopri di più</span>
         </a>
       </div>
       <div class="hero-stats d-flex justify-content-center flex-wrap gap-5 mt-5">
         <div class="stat">
           <div class="stat-num">200+</div>
-          <div class="stat-label">Membri</div>
+          <div class="stat-label" data-it="Membri" data-fil="Members">Membri</div>
         </div>
         <div class="stat">
           <div class="stat-num">800+</div>
-          <div class="stat-label">Città</div>
+          <div class="stat-label" data-it="Città" data-fil="Lungsod">Città</div>
         </div>
         <div class="stat">
           <div class="stat-num">20</div>
-          <div class="stat-label">Regioni</div>
+          <div class="stat-label" data-it="Regioni" data-fil="Rehiyon">Regioni</div>
         </div>
       </div>
     </div>
@@ -98,39 +92,36 @@
 
   <div class="divider"></div>
 
+  <!-- ── CHI SIAMO ── -->
   <section id="chi-siamo">
-  <div class="container-xl section-inner">
+    <div class="container-xl section-inner">
 
-    <!-- Titolo e testo -->
-    <div class="row justify-content-center text-center mb-5 reveal">
-      <div class="col-lg-8">
-        <span class="section-label">Chi Siamo</span>
-        <h2 class="section-title">Siamo una grande comunità di imprenditori indipendenti e liberi<br/><span style="color:var(--glow)"></span></h2>
-        <p class="text-muted-custom">
-          Vogliamo aiutare tutte le persone che sono stanche di essere stanche della propria situazione di vita.<br/>
-          Tu come stai? Sei felice di come stai adesso? Sei soddisfatto della tua vita attuale?<br/><br/>
-          Come ti vedrai tra 5 anni? In meglio o in peggio? Chiedilo a te stesso adesso.<br/>
-          Se la risposta è negativa, allora questa opportunità fa per te!<br/><br/>
-          <strong>IBO Community</strong> è una comunità che insegna i valori, l'etica e la professionalità.<br/>
-          Una comunità fatta di persone e non di numeri!
-        </p>
-      </div>
-    </div>
-
-    <!-- Foto desktop/mobile -->
-    <div class="row justify-content-center mb-5">
-      <div class="col-12 reveal text-center">
-        <div class="about-photo-wrap about-photo-main">
-          <!-- Desktop only -->
-          <img src="foto_pinoy_desktop.png" alt="IBO Community imprenditori indipendenti Italia" class="about-photo about-photo-desktop" style="height:auto; object-fit:contain;" />
-          <!-- Mobile only -->
-          <img src="foto_pinoy.png" alt="IBO Community opportunità di business" class="about-photo about-photo-mobile" style="height:auto; object-fit:contain;" />
+      <div class="row justify-content-center text-center mb-5 reveal">
+        <div class="col-lg-8">
+          <span class="section-label" data-it="Chi Siamo" data-fil="Sino Kami">Chi Siamo</span>
+          <h2 class="section-title" data-it="Siamo una grande comunità di imprenditori indipendenti e liberi" data-fil="Kami ay isang malaking community ng independent at free entrepreneurs">Siamo una grande comunità di imprenditori indipendenti e liberi</h2>
+          <p class="text-muted-custom" data-it='Vogliamo aiutare tutte le persone che sono stanche di essere stanche della propria situazione di vita.<br>Tu come stai? Sei felice di come stai adesso? Sei soddisfatto della tua vita attuale?<br><br>Come ti vedrai tra 5 anni? In meglio o in peggio? Chiedilo a te stesso adesso.<br>Se la risposta è negativa, allora questa opportunità fa per te!<br><br><strong>IBO Community</strong> è una comunità che insegna i valori, l&#39;etica e la professionalità.<br>Una comunità fatta di persone e non di numeri!' data-fil='Pagod ka na ba sa pagod sa buhay mo ngayon? Masaya ka ba sa kasalukuyang sitwasyon mo? Satisfied ka ba sa buhay mo ngayon?<br><br>Paano mo nakikita ang sarili mo sa loob ng 5 years? Mas maganda o mas masama? Tanungin mo ang sarili mo ngayon. Kung negative ang sagot, this opportunity is for you!<br><br><strong>IBO Community</strong> ay isang community na nagtuturo ng values, ethics, at professionalism. Isang community na made of people, hindi numbers!'>
+            Vogliamo aiutare tutte le persone che sono stanche di essere stanche della propria situazione di vita.<br>
+            Tu come stai? Sei felice di come stai adesso? Sei soddisfatto della tua vita attuale?<br><br>
+            Come ti vedrai tra 5 anni? In meglio o in peggio? Chiedilo a te stesso adesso.<br>
+            Se la risposta è negativa, allora questa opportunità fa per te!<br><br>
+            <strong>IBO Community</strong> è una comunità che insegna i valori, l'etica e la professionalità.<br>
+            Una comunità fatta di persone e non di numeri!
+          </p>
         </div>
       </div>
-    </div>
 
-  </div>
-</section>
+      <div class="row justify-content-center mb-5">
+        <div class="col-12 reveal text-center">
+          <div class="about-photo-wrap about-photo-main">
+            <img src="foto_pinoy_desktop.png" alt="IBO Community imprenditori indipendenti Italia" class="about-photo about-photo-desktop" />
+            <img src="foto_pinoy.png" alt="IBO Community opportunità di business" class="about-photo about-photo-mobile" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <div class="divider"></div>
 
@@ -138,72 +129,60 @@
   <section id="servizi" class="bg-deep">
     <div class="container-xl section-inner">
 
-    <div class="row justify-content-center text-center mb-5 reveal">
-  <div class="col-lg-7">
-    <span class="section-label">La tua grande opportunità</span>
-    <h2 class="section-title">Tutto ciò di cui hai bisogno<br/><span style="color:var(--glow)">per iniziare.</span></h2>
-    <p class="text-muted-custom">
-      Ogni giorno milioni di persone pagano bollette di luce, gas, internet. <strong>IBO Community</strong> ti permette di guadagnare un reddito residuale ogni volta che un tuo cliente paga uno di questi servizi essenziali.
-    </p>
-    <p class="text-muted-custom">
-      Diventando un <strong>Imprenditore Indipendente IBO</strong>, ricevi un ufficio virtuale, assistenza completa e strumenti della nostra attività imprenditoriale pronti all'uso. Ogni nuovo cliente che acquisisci ti dà un aumento mensile automatico — mese dopo mese, per tutta la durata del contratto.
-    </p>
-    <p class="text-muted-custom">
-      Non ci sono limiti al numero di persone che puoi introdurre. Più persone entrano nella tua squadra, più cresce il tuo reddito residuale. Un'opportunità <strong>UNICA</strong> nel suo genere, con il supporto completo della nostra azienda ad ogni passo — prova a immaginare come sarebbe diversa la tua vita con un reddito residuale e ora con <strong>IBO Community</strong> puoi trasformarla in realtà!
-    </p>
-  </div>
-</div>
-
-      <!-- Fila 1: 3 cerchi -->
-      <div class="row justify-content-center g-4 mb-4 reveal">
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle service-circle-icon">
-              <i class="fa-solid fa-globe"></i>
-            </div>
-          </div>
-          <h5 class="service-title">Sito Personalizzato</h5>
-          <p class="service-desc">Una pagina dedicata alla tua attività, pronta all'uso.</p>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle service-circle-icon">
-              <i class="fa-solid fa-headset"></i>
-            </div>
-          </div>
-          <h5 class="service-title">Supporto Clienti</h5>
-          <p class="service-desc">Assistenza completa per te e i tuoi clienti, sempre.</p>
-        </div>
-        <div class="col-6 col-md-4 col-lg-3 text-center">
-          <div class="service-circle-wrap">
-            <div class="service-circle service-circle-icon">
-              <i class="fa-solid fa-bullhorn"></i>
-            </div>
-          </div>
-          <h5 class="service-title">Marketing Tools</h5>
-          <p class="service-desc">Strumenti pronti per condividere e promuovere l'opportunità IBO Community.</p>
+      <div class="row justify-content-center text-center mb-5 reveal">
+        <div class="col-lg-7">
+          <span class="section-label" data-it="La tua grande opportunità" data-fil="Ang Iyong Malaking Opportunity">La tua grande opportunità</span>
+          <h2 class="section-title" data-it='Tutto ciò di cui hai bisogno<br><span style="color:var(--glow)">per iniziare.</span>' data-fil='Lahat ng kailangan mo<br><span style="color:var(--glow)">para magsimula.</span>'>Tutto ciò di cui hai bisogno<br/><span style="color:var(--glow)">per iniziare.</span></h2>
+          <p class="text-muted-custom" data-it='Ogni giorno milioni di persone pagano bollette di luce, gas, internet. <strong>IBO Community</strong> ti permette di guadagnare un reddito residuale ogni volta che un tuo cliente paga uno di questi servizi essenziali.' data-fil='Bawat araw, milyon-milyong tao ang nagbabayad ng bills sa kuryente, gas, internet. <strong>IBO Community</strong> ay nagbibigay-daan sa&#39;yo na kumita ng residual income kapwa-kapwa magbayad ang client mo sa essential services na ito.'>
+            Ogni giorno milioni di persone pagano bollette di luce, gas, internet. <strong>IBO Community</strong> ti permette di guadagnare un reddito residuale ogni volta che un tuo cliente paga uno di questi servizi essenziali.
+          </p>
+          <p class="text-muted-custom" data-it='Diventando un <strong>Imprenditore Indipendente IBO</strong>, ricevi un ufficio virtuale, assistenza completa e strumenti della nostra attività imprenditoriale pronti all&#39;uso. Ogni nuovo cliente che acquisisci ti dà un aumento mensile automatico — mese dopo mese, per tutta la durata del contratto.' data-fil='Bilang <strong>Imprenditore Indipendente IBO</strong>, makakakuha ka ng virtual office, full support, at mga tools para sa negosyo na ready-to-use. Bawat bagong client na makukuha mo ay automatic na nagbibigay sayo ng monthly increase — month after month, habang valid ang contract.'>
+            Diventando un <strong>Imprenditore Indipendente IBO</strong>, ricevi un ufficio virtuale, assistenza completa e strumenti della nostra attività imprenditoriale pronti all'uso. Ogni nuovo cliente che acquisisci ti dà un aumento mensile automatico — mese dopo mese, per tutta la durata del contratto.
+          </p>
+          <p class="text-muted-custom" data-it='Non ci sono limiti al numero di persone che puoi introdurre. Più persone entrano nella tua squadra, più cresce il tuo reddito residuale. Un&#39;opportunità <strong>UNICA</strong> nel suo genere, con il supporto completo della nostra azienda ad ogni passo — prova a immaginare come sarebbe diversa la tua vita con un reddito residuale e ora con <strong>IBO Community</strong> puoi trasformarla in realtà!' data-fil='Walang limit sa bilang ng tao na maiintroduce mo. Mas marami ang sumali sa team mo, mas lumalaki ang residual income mo. Isang opportunity na <strong>UNIQUE</strong> talaga, with full support ng aming company sa bawat step — i-imagine mo kung gaano kaiba ang buhay mo with residual income, at ngayon with <strong>IBO Community</strong> magiging reality na ito!'>
+            Non ci sono limiti al numero di persone che puoi introdurre. Più persone entrano nella tua squadra, più cresce il tuo reddito residuale. Un'opportunità <strong>UNICA</strong> nel suo genere, con il supporto completo della nostra azienda ad ogni passo — prova a immaginare come sarebbe diversa la tua vita con un reddito residuale e ora con <strong>IBO Community</strong> puoi trasformarla in realtà!
+          </p>
         </div>
       </div>
 
-      <!-- Fila 2: 2 cerchi -->
-      <div class="row justify-content-center g-4 reveal delay-1">
+      <div class="row justify-content-center g-4 mb-4 reveal">
         <div class="col-6 col-md-4 col-lg-3 text-center">
           <div class="service-circle-wrap">
-            <div class="service-circle service-circle-icon">
-              <i class="fa-solid fa-people-group"></i>
-            </div>
+            <div class="service-circle service-circle-icon"><i class="fa-solid fa-globe"></i></div>
           </div>
-          <h5 class="service-title">IBO Community</h5>
-          <p class="service-desc">Entra nella rete di affiliati IBO in tutta Italia.</p>
+          <h5 class="service-title" data-it="Sito Personalizzato" data-fil="Personalized Website">Sito Personalizzato</h5>
+          <p class="service-desc" data-it="Una pagina dedicata alla tua attività, pronta all'uso." data-fil="Sariling page para sa negosyo mo, ready to use.">Una pagina dedicata alla tua attività, pronta all'uso.</p>
         </div>
         <div class="col-6 col-md-4 col-lg-3 text-center">
           <div class="service-circle-wrap">
-            <div class="service-circle service-circle-icon">
-              <i class="fa-solid fa-display"></i>
-            </div>
+            <div class="service-circle service-circle-icon"><i class="fa-solid fa-headset"></i></div>
+          </div>
+          <h5 class="service-title" data-it="Supporto Clienti" data-fil="Customer Support">Supporto Clienti</h5>
+          <p class="service-desc" data-it="Assistenza completa per te e i tuoi clienti, sempre." data-fil="Full support para sa'yo at sa mga clients mo, palagi.">Assistenza completa per te e i tuoi clienti, sempre.</p>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="service-circle-wrap">
+            <div class="service-circle service-circle-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          </div>
+          <h5 class="service-title" data-it="Marketing Tools" data-fil="Marketing Tools">Marketing Tools</h5>
+          <p class="service-desc" data-it="Strumenti pronti per condividere e promuovere l'opportunità IBO Community." data-fil="Mga ready tools para i-share at i-promote ang opportunity ng IBO Community.">Strumenti pronti per condividere e promuovere l'opportunità IBO Community.</p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center g-4 reveal delay-1">
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="service-circle-wrap">
+            <div class="service-circle service-circle-icon"><i class="fa-solid fa-people-group"></i></div>
+          </div>
+          <h5 class="service-title">IBO Community</h5>
+          <p class="service-desc" data-it="Entra nella rete di affiliati IBO in tutta Italia." data-fil="Sumali sa network ng IBO affiliates sa buong Italya.">Entra nella rete di affiliati IBO in tutta Italia.</p>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3 text-center">
+          <div class="service-circle-wrap">
+            <div class="service-circle service-circle-icon"><i class="fa-solid fa-display"></i></div>
           </div>
           <h5 class="service-title">IBO Back Office</h5>
-          <p class="service-desc">Gestisci tutto dal tuo ufficio virtuale, 24 ore su 24, 7 giorni su 7.</p>
+          <p class="service-desc" data-it="Gestisci tutto dal tuo ufficio virtuale, 24 ore su 24, 7 giorni su 7." data-fil="Manage lahat from your virtual office, 24/7.">Gestisci tutto dal tuo ufficio virtuale, 24 ore su 24, 7 giorni su 7.</p>
         </div>
       </div>
 
@@ -215,26 +194,19 @@
   <!-- ── GALLERIA ── -->
   <section id="galleria">
     <div class="container-xl section-inner">
-
       <div class="text-center reveal mb-5">
-        <span class="section-label">Galleria</span>
-        <h2 class="section-title">I nostri momenti.</h2>
-        <p class="text-muted-custom mx-auto" style="max-width:500px;">Scorrono le immagini della nostra community. Ogni foto racconta una storia.</p>
+        <span class="section-label" data-it="Galleria" data-fil="Gallery">Galleria</span>
+        <h2 class="section-title" data-it="I nostri momenti." data-fil="Ang Aming mga Sandali.">I nostri momenti.</h2>
+        <p class="text-muted-custom mx-auto" style="max-width:500px;" data-it="Scorrono le immagini della nostra community. Ogni foto racconta una storia." data-fil="Dumadaan ang mga larawan ng aming community. Bawat litrato ay may kwento.">Scorrono le immagini della nostra community. Ogni foto racconta una storia.</p>
       </div>
-
       <div class="gallery-carousel-wrap reveal delay-1">
         <div id="galleryCarousel" class="carousel slide">
           <div class="carousel-indicators gallery-indicators" id="galleryIndicators"></div>
           <div class="carousel-inner gallery-inner-wrap" id="galleryInner"></div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-            <i class="fa-solid fa-circle-chevron-left fa-2x"></i>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-            <i class="fa-solid fa-circle-chevron-right fa-2x"></i>
-          </button>
+          <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev"><i class="fa-solid fa-circle-chevron-left fa-2x"></i></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next"><i class="fa-solid fa-circle-chevron-right fa-2x"></i></button>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -242,200 +214,197 @@
 
   <!-- ── RECENSIONI ── -->
   <section id="recensioni" class="bg-deep">
-  <div class="container-xl section-inner">
+    <div class="container-xl section-inner">
 
-    <div class="row justify-content-center text-center mb-5 reveal">
-      <div class="col-lg-7">
-        <span class="section-label">Recensioni</span>
-        <h2 class="section-title">La loro storia<br/><span style="color:var(--glow)">può essere la tua.</span></h2>
-        <p class="text-muted-custom">Leggi cosa dicono le persone che hanno già scelto IBO Community.</p>
+      <div class="row justify-content-center text-center mb-5 reveal">
+        <div class="col-lg-7">
+          <span class="section-label" data-it="Recensioni" data-fil="Mga Testimonials">Recensioni</span>
+          <h2 class="section-title" data-it='La loro storia<br><span style="color:var(--glow)">può essere la tua.</span>' data-fil='Ang kwento nila<br><span style="color:var(--glow)">maaari ring maging kwento mo.</span>'>La loro storia<br/><span style="color:var(--glow)">può essere la tua.</span></h2>
+          <p class="text-muted-custom" data-it="Leggi cosa dicono le persone che hanno già scelto IBO Community." data-fil="Basahin kung ano ang sinasabi ng mga taong pumili na ng IBO Community.">Leggi cosa dicono le persone che hanno già scelto IBO Community.</p>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 reveal">
+
+        <div class="col">
+          <div class="testi-card-v2">
+            <img src="foto_kris.jpg" alt="Kris" class="testi-photo-v2" />
+            <div class="testi-body">
+              <h5 class="testi-name">Kris</h5>
+              <span class="testi-city">Roma</span>
+              <i class="fa-solid fa-quote-left testi-quote"></i>
+              <p data-it="Due cari amici mi hanno condiviso questa fantastica opportunità IBO Community. Lavoravo al supermercato per quasi 50 ore a settimana. Ero stanco del mio lavoro e non avevo tempo libero per me. Ho scelto questa opportunità per aiutare la mia famiglia e di avere la libertà finanziaria!" data-fil="Dalawang malapit na kaibigan ang nag-share sa akin ng fantastic opportunity na ito ng IBO Community. Nagtatrabaho ako sa supermarket ng almost 50 hours a week. Pagod na ako sa trabaho ko at wala akong free time para sa sarili ko. Pinili ko ang opportunity na ito para tulungan ang family ko at makamit ang financial freedom!">"Due cari amici mi hanno condiviso questa fantastica opportunità IBO Community. Lavoravo al supermercato per quasi 50 ore a settimana. Ero stanco del mio lavoro e non avevo tempo libero per me. Ho scelto questa opportunità per aiutare la mia famiglia e di avere la libertà finanziaria!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testi-card-v2">
+            <img src="foto_joanna.jpg" alt="Joann" class="testi-photo-v2" />
+            <div class="testi-body">
+              <h5 class="testi-name">Joann</h5>
+              <span class="testi-city">Roma</span>
+              <i class="fa-solid fa-quote-left testi-quote"></i>
+              <p data-it="Mio figlio mi ha contattato di questa incredibile opportunità. Ho subito detto di sì per aiutarlo e supportarlo. Ho lavorato come domestica Colf per circa 45 anni. Ho 64 anni e sono stanca di essere stanca. Voglio fare carriera in questa attività, io amo e voglio viaggiare tutto il mondo." data-fil="Si anak ko ang nag-contact sa akin tungkol sa amazing opportunity na ito. Agad akong sumang-ayon para tulungan at suportahan siya. Nagtrabaho ako bilang domestic helper for almost 45 years. 64 years old ako and tired na ako sa pagod. Gusto kong magkaroon ng career sa business na ito, mahal ko at gusto kong mag-travel sa buong mundo.">"Mio figlio mi ha contattato di questa incredibile opportunità. Ho subito detto di sì per aiutarlo e supportarlo. Ho lavorato come domestica Colf per circa 45 anni. Ho 64 anni e sono stanca di essere stanca. Voglio fare carriera in questa attività, io amo e voglio viaggiare tutto il mondo."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testi-card-v2">
+            <img src="foto_Cherry.jpg" alt="Cherry" class="testi-photo-v2" />
+            <div class="testi-body">
+              <h5 class="testi-name">Cherry</h5>
+              <span class="testi-city">Roma</span>
+              <i class="fa-solid fa-quote-left testi-quote"></i>
+              <p data-it="Avevo paura di iniziare qualcosa di nuovo, ma IBO Community mi ha dato tutta la formazione e il supporto di cui avevo bisogno. Oggi lavoro da casa, gestisco i miei orari e finalmente ho tempo per la mia famiglia." data-fil="Natakot ako noon na mag-start ng bagong something, pero binigay sa akin ng IBO Community lahat ng training at support na kailangan ko. Ngayon nagtatrabaho ako from home, ako ang nagmamanage ng schedule ko, at finally may time na ako para sa family ko.">"Avevo paura di iniziare qualcosa di nuovo, ma IBO Community mi ha dato tutta la formazione e il supporto di cui avevo bisogno. Oggi lavoro da casa, gestisco i miei orari e finalmente ho tempo per la mia famiglia."</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testi-card-v2">
+            <img src="foto_Josie.jpg" alt="Josie" class="testi-photo-v2" />
+            <div class="testi-body">
+              <h5 class="testi-name">Josie</h5>
+              <span class="testi-city">Roma</span>
+              <i class="fa-solid fa-quote-left testi-quote"></i>
+              <p data-it="Ho sempre sognato di avere una mia attività ma non sapevo da dove cominciare. Con IBO Community ho trovato un sistema già pronto, un team fantastico e risultati concreti fin dai primi mesi. Non tornerei mai indietro!" data-fil="Pinangarap ko na magkaroon ng sariling business pero hindi ko alam saan magsisimula. Sa IBO Community, nakahanap ako ng ready system, fantastic team, at concrete results from the first months. Hindi ko na babalikan ang dati!">"Ho sempre sognato di avere una mia attività ma non sapevo da dove cominciare. Con IBO Community ho trovato un sistema già pronto, un team fantastico e risultati concreti fin dai primi mesi. Non tornerei mai indietro!"</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="testi-card-v2">
+            <img src="foto_esthela.jpg" alt="Esthela" class="testi-photo-v2" />
+            <div class="testi-body">
+              <h5 class="testi-name">Esthela</h5>
+              <span class="testi-city">Roma</span>
+              <i class="fa-solid fa-quote-left testi-quote"></i>
+              <p data-it="Lavoravo tutto il giorno e lo stipendio non bastava mai. Un'amica mi ha parlato di IBO Community e ho deciso di provare. Oggi ho un reddito extra che cresce ogni mese e una community che mi sostiene ogni giorno." data-fil="Nagtatrabaho ako the whole day pero hindi sapat ang sweldo. Isang amiga ang nag-tell sa akin about IBO Community at decided akong subukan. Ngayon may extra income ako na lumalaki bawat buwan at isang community na sumusuporta sa akin araw-araw.">"Lavoravo tutto il giorno e lo stipendio non bastava mai. Un'amica mi ha parlato di IBO Community e ho deciso di provare. Oggi ho un reddito extra che cresce ogni mese e una community che mi sostiene ogni giorno."</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
+  </section>
 
-    <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4 reveal">
-
-      <div class="col">
-        <div class="testi-card-v2">
-          <img src="foto_kris.jpg" alt="Kris" class="testi-photo-v2" />
-          <div class="testi-body">
-            <h5 class="testi-name">Kris</h5>
-            <span class="testi-city">Roma</span>
-            <i class="fa-solid fa-quote-left testi-quote"></i>
-            <p>"Due cari amici mi hanno condiviso questa fantastica opportunità IBO Community. Lavoravo al supermercato per quasi 50 ore a settimana. Ero stanco del mio lavoro e non avevo tempo libero per me. Ho scelto questa opportunità per aiutare la mia famiglia e di avere la libertà finanziaria!"</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="testi-card-v2">
-          <img src="foto_joanna.jpg" alt="Joann" class="testi-photo-v2" />
-          <div class="testi-body">
-            <h5 class="testi-name">Joann</h5>
-            <span class="testi-city">Roma</span>
-            <i class="fa-solid fa-quote-left testi-quote"></i>
-            <p>"Mio figlio mi ha contattato di questa incredibile opportunità. Ho subito detto di sì per aiutarlo e supportarlo. Ho lavorato come domestica Colf per circa 45 anni. Ho 64 anni e sono stanca di essere stanca. Voglio fare carriera in questa attività, io amo e voglio viaggiare tutto il mondo."</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="testi-card-v2">
-          <img src="foto_Cherry.jpg" alt="Cherry" class="testi-photo-v2" />
-          <div class="testi-body">
-            <h5 class="testi-name">Cherry</h5>
-            <span class="testi-city">Roma</span>
-            <i class="fa-solid fa-quote-left testi-quote"></i>
-            <p>"Avevo paura di iniziare qualcosa di nuovo, ma IBO Community mi ha dato tutta la formazione e il supporto di cui avevo bisogno. Oggi lavoro da casa, gestisco i miei orari e finalmente ho tempo per la mia famiglia."</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="testi-card-v2">
-          <img src="foto_Josie.jpg" alt="Josie" class="testi-photo-v2" />
-          <div class="testi-body">
-            <h5 class="testi-name">Josie</h5>
-            <span class="testi-city">Roma</span>
-            <i class="fa-solid fa-quote-left testi-quote"></i>
-            <p>"Ho sempre sognato di avere una mia attività ma non sapevo da dove cominciare. Con IBO Community ho trovato un sistema già pronto, un team fantastico e risultati concreti fin dai primi mesi. Non tornerei mai indietro!"</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="testi-card-v2">
-          <img src="foto_esthela.jpg" alt="Esthela" class="testi-photo-v2" />
-          <div class="testi-body">
-            <h5 class="testi-name">Esthela</h5>
-            <span class="testi-city">Roma</span>
-            <i class="fa-solid fa-quote-left testi-quote"></i>
-            <p>"Lavoravo tutto il giorno e lo stipendio non bastava mai. Un'amica mi ha parlato di IBO Community e ho deciso di provare. Oggi ho un reddito extra che cresce ogni mese e una community che mi sostiene ogni giorno."</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
   <div class="divider"></div>
 
- <!-- ── CONTATTI ── -->
-<section id="contatti">
-  <div class="container-xl section-inner">
+  <!-- ── CONTATTI ── -->
+  <section id="contatti">
+    <div class="container-xl section-inner">
 
-    <div class="row justify-content-center text-center mb-5 reveal">
-      <div class="col-lg-8">
-        <span class="section-label">Unisciti a Noi</span>
-        <h2 class="section-title">Pronto a fare parte<br/>di qualcosa di grande?</h2>
-        <p class="text-muted-custom">Entrare è semplice. Lascia la tua email e ti contatteremo per questa fantastica opportunità!</p>
+      <div class="row justify-content-center text-center mb-5 reveal">
+        <div class="col-lg-8">
+          <span class="section-label" data-it="Unisciti a Noi" data-fil="Sumali Sa Amin">Unisciti a Noi</span>
+          <h2 class="section-title" data-it="Pronto a fare parte<br>di qualcosa di grande?" data-fil="Ready ka na bang maging part<br>ng something malaki?">Pronto a fare parte<br/>di qualcosa di grande?</h2>
+          <p class="text-muted-custom" data-it="Entrare è semplice. Lascia la tua email e ti contatteremo per questa fantastica opportunità!" data-fil="Madali lang ang sumali. I-leave mo ang email mo at kami ang magcontact sa'yo para sa amazing opportunity na ito!">Entrare è semplice. Lascia la tua email e ti contatteremo per questa fantastica opportunità!</p>
+        </div>
       </div>
-    </div>
 
-    <div class="row g-5">
+      <div class="row g-5">
 
-      <div class="col-lg-7 reveal">
-        <div class="contact-form-box">
-          <form id="contactForm">
+        <div class="col-lg-7 reveal">
+          <div class="contact-form-box">
+            <form id="contactForm">
 
-            <input type="hidden" name="access_key" value="01573a11-4299-49f3-9983-6337e8930277">
-            <input type="hidden" name="subject" value="Nuovo messaggio da IBOCommunity">
-            <input type="hidden" name="from_name" value="IBOCommunity Sito">
+              <input type="hidden" name="access_key" value="01573a11-4299-49f3-9983-6337e8930277">
+              <input type="hidden" name="subject" value="Nuovo messaggio da IBOCommunity">
+              <input type="hidden" name="from_name" value="IBOCommunity Sito">
 
-            <div class="row g-3 mb-3">
-              <div class="col-md-6">
-                <label class="form-label custom-label">Nome e Cognome</label>
-                <input type="text" name="name" class="form-control custom-input" placeholder="Mario Rossi" required
+              <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                  <label class="form-label custom-label" data-it="Nome e Cognome" data-fil="Buong Pangalan">Nome e Cognome</label>
+                  <input type="text" name="name" class="form-control custom-input" placeholder="Mario Rossi" required
+                    oninput="this.value=this.value.replace(/<[^>]*>/g,'')" />
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label custom-label">Email</label>
+                  <input type="email" name="email" class="form-control custom-input" placeholder="mario@email.it" required />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label custom-label" data-it="Chi ti ha condiviso il nostro sito?" data-fil="Sino ang nag-share sa'yo ng site namin?">Chi ti ha condiviso il nostro sito?</label>
+                <input type="text" name="condiviso_da" class="form-control custom-input" placeholder="Nome e cognome"
                   oninput="this.value=this.value.replace(/<[^>]*>/g,'')" />
               </div>
-              <div class="col-md-6">
-                <label class="form-label custom-label">Email</label>
-                <input type="email" name="email" class="form-control custom-input" placeholder="mario@email.it" required />
+
+              <div class="mb-4">
+                <label class="form-label custom-label" data-it="Messaggio" data-fil="Mensahe">Messaggio</label>
+                <textarea name="message" class="form-control custom-input" rows="5" placeholder="Scrivi qui il tuo messaggio..." required
+                  data-placeholder-it="Scrivi qui il tuo messaggio..." data-placeholder-fil="I-type mo dito ang mensahe mo..."
+                  oninput="this.value=this.value.replace(/<[^>]*>/g,'')"></textarea>
               </div>
-            </div>
 
-            <div class="mb-3">
-              <label class="form-label custom-label">Chi ti ha condiviso il nostro sito?</label>
-              <input type="text" name="condiviso_da" class="form-control custom-input" placeholder="Nome e cognome"
-                oninput="this.value=this.value.replace(/<[^>]*>/g,'')" />
-            </div>
+              <button type="submit" class="btn btn-hero" id="submitBtn">
+                <i class="fa-solid fa-paper-plane me-2"></i><span data-it="Invia messaggio" data-fil="Ipadala ang Mensahe">Invia messaggio</span>
+              </button>
+              <p id="contact-msg" class="mt-3 success-msg" style="display:none;">
+                <i class="fa-solid fa-circle-check me-1"></i>
+                <span data-it="Messaggio inviato! Ti risponderemo presto." data-fil="Naipadala ang mensahe! Sasagutin ka namin agad.">Messaggio inviato! Ti risponderemo presto.</span>
+              </p>
+              <p id="contact-err" class="mt-3 text-danger" style="display:none;">
+                <i class="fa-solid fa-circle-xmark me-1"></i>
+                <span data-it="Errore nell'invio. Riprova più tardi." data-fil="Error sa pagpadala. Subukan ulit mamaya.">Errore nell'invio. Riprova più tardi.</span>
+              </p>
 
-            <div class="mb-4">
-              <label class="form-label custom-label">Messaggio</label>
-              <textarea name="message" class="form-control custom-input" rows="5" placeholder="Scrivi qui il tuo messaggio..." required
-                oninput="this.value=this.value.replace(/<[^>]*>/g,'')"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn-hero" id="submitBtn">
-              <i class="fa-solid fa-paper-plane me-2"></i>Invia messaggio
-            </button>
-            <p id="contact-msg" class="mt-3 success-msg" style="display:none;">
-              <i class="fa-solid fa-circle-check me-1"></i>
-              Messaggio inviato! Ti risponderemo presto.
-            </p>
-            <p id="contact-err" class="mt-3 text-danger" style="display:none;">
-              <i class="fa-solid fa-circle-xmark me-1"></i>
-              Errore nell'invio. Riprova più tardi.
-            </p>
-
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
 
-      <div class="col-lg-5 reveal delay-1">
-        <div class="d-flex flex-column gap-3">
-          <a class="contact-item" href="mailto:infoibocommunity@gmail.com">
-            <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
-            <div><small>Email</small><span>infoibocommunity@gmail.com</span></div>
-          </a>
-          <a class="contact-item" href="#">
-            <span class="contact-icon"><i class="fa-brands fa-facebook-f"></i></span>
-            <div><small>Facebook</small><span>/IBOCommunity</span></div>
-          </a>
-          <a class="contact-item" href="#">
-            <span class="contact-icon"><i class="fa-brands fa-instagram"></i></span>
-            <div><small>Instagram</small><span>@ibocommunity</span></div>
-          </a>
+        <div class="col-lg-5 reveal delay-1">
+          <div class="d-flex flex-column gap-3">
+            <a class="contact-item" href="mailto:infoibocommunity@gmail.com">
+              <span class="contact-icon"><i class="fa-solid fa-envelope"></i></span>
+              <div><small>Email</small><span>infoibocommunity@gmail.com</span></div>
+            </a>
+            <a class="contact-item" href="#">
+              <span class="contact-icon"><i class="fa-brands fa-facebook-f"></i></span>
+              <div><small>Facebook</small><span>/IBOCommunity</span></div>
+            </a>
+            <a class="contact-item" href="#">
+              <span class="contact-icon"><i class="fa-brands fa-instagram"></i></span>
+              <div><small>Instagram</small><span>@ibocommunity</span></div>
+            </a>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
   <!-- ── FOOTER ── -->
- <footer class="site-footer">
-  <div class="container-xl">
-
-<div class="text-center mb-3">
-  <span class="footer-brand-name">IBO</span>
-  <span class="footer-brand-name" style="display:block; font-size: 1.2rem;">Imprenditori Indipendenti Liberi</span>
-  <img src="ibo_logo.jpg" alt="IBO Logo" style="height:80px; width:auto; display:block; margin:0.8rem auto 0;" />
-</div>
-
-    <div class="d-flex justify-content-center gap-3 mb-4">
-      <a href="#" class="footer-social" aria-label="Facebook">
-        <i class="fa-brands fa-facebook-f"></i>
-      </a>
-      <a href="#" class="footer-social" aria-label="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
+  <footer class="site-footer">
+    <div class="container-xl">
+      <div class="text-center mb-3">
+        <span class="footer-brand-name">IBO</span>
+        <span class="footer-brand-name" style="display:block; font-size: 1.2rem;">Imprenditori Indipendenti Liberi</span>
+        <img src="ibo_logo.jpg" alt="IBO Logo" style="height:80px; width:auto; display:block; margin:0.8rem auto 0;" />
+      </div>
+      <div class="d-flex justify-content-center gap-3 mb-4">
+        <a href="#" class="footer-social" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="footer-social" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="d-flex align-items-center justify-content-center flex-wrap gap-3">
+        <p class="footer-copy mb-0">© 2026 <strong>IBO Community</strong>. Tutti i diritti riservati.</p>
+        <ul class="footer-legal list-unstyled d-flex flex-wrap gap-3 mb-0">
+          <li><a href="cookie.html">Cookie Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
     </div>
+  </footer>
 
-    <div class="footer-divider"></div>
-
-    <div class="d-flex align-items-center justify-content-center flex-wrap gap-3">
-      <p class="footer-copy mb-0">
-        © 2026 <strong>IBO Community</strong>. Tutti i diritti riservati.
-      </p>
-      <ul class="footer-legal list-unstyled d-flex flex-wrap gap-3 mb-0">
-        <li><a href="cookie.html">Cookie Policy</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
-
+  <!-- ── COOKIE BANNER (sempre in italiano) ── -->
+  <div id="cookie-banner" style="display:none;">
+    <p>🍪 Questo sito utilizza cookie tecnici necessari al suo funzionamento. <a href="cookie.html">Leggi la Cookie Policy</a></p>
+    <button onclick="acceptCookies()">Accetta</button>
   </div>
-</footer>
 
-  <!-- Bootstrap 5 JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
   <script>
   /* ── Stars ── */
@@ -480,7 +449,6 @@
       const msgOk  = document.getElementById('contact-msg');
       const msgErr = document.getElementById('contact-err');
       btn.disabled = true;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin me-2"></i>Invio in corso...';
       msgOk.style.display = 'none';
       msgErr.style.display = 'none';
       try {
@@ -499,12 +467,11 @@
         msgErr.style.display = 'block';
       }
       btn.disabled = false;
-      btn.innerHTML = '<i class="fa-solid fa-paper-plane me-2"></i>Invia messaggio';
     });
   });
 
   /* ── Navbar scroll a contatti ── */
-  const navCta = document.querySelector('.nav-cta');
+  const navCta = document.querySelector('.nav-cta-contact');
   if (navCta) {
     navCta.addEventListener('click', function(e) {
       e.preventDefault();
@@ -535,22 +502,43 @@
     setTimeout(() => { bsCarousel.cycle(); }, 100);
   }
 
-  /* ── Language Widget ── */
+  /* ── COOKIE BANNER ── */
+  if (!localStorage.getItem('cookie-accepted')) {
+    document.getElementById('cookie-banner').style.display = 'flex';
+  }
+  function acceptCookies() {
+    localStorage.setItem('cookie-accepted', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+
+  /* ── SWITCH LINGUA IT / FIL ── */
+  function setLanguage(lang) {
+    document.querySelectorAll('[data-it]').forEach(el => {
+      const text = el.getAttribute('data-' + lang);
+      if (text !== null) el.innerHTML = text;
+    });
+    document.querySelectorAll('[data-placeholder-it]').forEach(el => {
+      const ph = el.getAttribute('data-placeholder-' + lang);
+      if (ph) el.setAttribute('placeholder', ph);
+    });
+    document.documentElement.lang = (lang === 'fil') ? 'fil' : 'it';
+    localStorage.setItem('site-lang', lang);
+  }
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', function() {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
       document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('lang-active'));
       this.classList.add('lang-active');
+      setLanguage(this.getAttribute('data-lang'));
     });
   });
 
-  /* ── Cookie Banner ── */
-if (!localStorage.getItem('cookie-accepted')) {
-  document.getElementById('cookie-banner').style.display = 'flex';
-}
-function acceptCookies() {
-  localStorage.setItem('cookie-accepted', 'true');
-  document.getElementById('cookie-banner').style.display = 'none';
-}
+  /* Ripristina lingua salvata */
+  const savedLang = localStorage.getItem('site-lang');
+  if (savedLang === 'fil') {
+    document.querySelector('.lang-btn[data-lang="fil"]').click();
+  }
   </script>
 
 </body>

@@ -134,6 +134,8 @@ p {
   font-weight: 700 !important; letter-spacing: 0.02em !important;
   transition: background 0.25s, box-shadow 0.25s !important;
 }
+.nav-cta::after { display: none !important; }
+.nav-cta:hover  { background: var(--glow) !important; opacity: 1 !important; box-shadow: 0 0 20px rgba(77,139,255,0.5) !important; }
 
 .nav-cta-contact {
   padding: 0.42rem 1.1rem !important;
@@ -151,9 +153,6 @@ p {
   box-shadow: 0 0 16px rgba(77,139,255,0.4) !important;
   opacity: 1 !important;
 }
-
-.nav-cta::after { display: none !important; }
-.nav-cta:hover  { background: var(--glow) !important; opacity: 1 !important; box-shadow: 0 0 20px rgba(77,139,255,0.5) !important; }
 
 @media (min-width: 768px) {
   .custom-nav .container-xl { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: space-between !important; }
