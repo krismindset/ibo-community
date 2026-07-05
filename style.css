@@ -186,6 +186,7 @@ p {
   overflow: hidden; padding-top: 80px; box-sizing: border-box; background: #04081a;
 }
 .intro-img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+.intro-img-mobile { display: none; }
 
 
 /* ─────────────────────────────────────────
@@ -439,7 +440,8 @@ p {
   .nav-cta { padding: 0.38rem 0.9rem !important; font-size: 0.72rem !important; }
 
   #intro { height: 100vh; padding-top: 0; }
-  .intro-img { content: url('foto_hero_mobile__.jpg'); object-fit: cover; width: 100%; height: 100%; display: block; }
+  .intro-img-desktop { display: none; }
+  .intro-img-mobile  { display: block; object-fit: cover; width: 100%; height: 100%; }
 
   .section-inner  { padding: 5rem 1.2rem; }
   .orb-1 { width: 280px; height: 280px; }
